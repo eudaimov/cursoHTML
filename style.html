@@ -54,7 +54,23 @@
         <p class="codigo"> &lt;p style="color:red"&gt;Hola Mundo&lt;/p&gt;</p>
 
         <li>Interno - mediante el uso de un &lt;style&gt;&lt;/style&gt;</li>
+        <p>Por ejemplo:</p>
+        <pre class="codigo">
+&lt;style>
+    p{
+        color:red;
+    }
+&lt;/style></pre>
         <li>Externo : mediante el uso de un &lt;link> elemento para vincular a un archivo CSS externo</li>
+        <pre class="codigo">
+        //En el archivo html, dentro del head.
+        &lt;link rel="stylesheet"  href="css/style.css"/>
+
+        //archivo style.css
+            p{
+                color:red;
+            }
+        </pre>
     </ul>
     <p>
         La forma más común de agregar CSS es mantener los estilos en archivos CSS externos. Sin embargo, en este tutorial usaremos estilos en línea e internos, porque esto es más fácil de demostrar y más fácil para que usted mismo lo pruebe.
