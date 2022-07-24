@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding:0;
+}
+.codigo{
+    background-color: rgb(191, 211, 248);
+    font-family: 'Courier New', Courier, monospace;
+
+    margin:1em 2em;
+    padding-inline: 2em;
+    padding-block: 1em;
+}
+body{
+    margin: 3em;
+}
+p{
+    margin-bottom: 10px;
+}
+footer{
+    margin-top: 20px;
+}
+.centrado{
+    text-align: center;
+}
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Roboto:wght@100&display=swap');
+p, li{
+    font-family:'Roboto', sans-serif;
+}
+li{
+    margin-left: 1em;
+    margin-block: 1em;
+}
+h1,h2,h3,h4,h5,h6{
+    margin-block: 1em;
+}

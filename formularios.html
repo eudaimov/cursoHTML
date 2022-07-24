@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Formularios</h1>
+    <h2>Para qué sirven</h2>
+    <p>Un formulario es utilizado en la mayoría de las páginas web para recoger diverso tipo de información y enviarla a un servidor.</p>
+    <h2>Composión o estructura:</h2>
+    <p>El elemento raiz de un formaulario esta formado por el elemento &lt;form&gt; &lt;/form&gt;</p>
+    <p>Dentro de este elemento y de manera anidada se encuentran los elementos &lt;input/&gt;, los cuales existen de muy diversos, estos elementos 
+        también son conocidos como campos de entrada de los formularios </p>
+    <p>Delante de cada elemento <em>input</em> suele ir antecedido por el elemento &lt;label&gt; &lt;label&gt;, aunque no siempre es así. </p>
+    <h2>Label</h2>
+    <p>Este elemento nos sirve para identificar
+        el contenido que va ir dentro de su correspondiente entrada, para relacionar el elemento label con su input correspondiente se utiliza 
+        el atributo for.
+    </p>
+    <p>
+        Como valor del atributo for se escribir el mismo que hemos dado en el atributo name del elemento input.
+        Como contenido, escribiremos una palabra o palabras que nos expliquen lo que estamos introduciendo en nuestro input.       
+    </p>
+    <p>Ejemplo:</p>
+    <pre class="codigo">
+        &lt;form&gt;
+            &lt;label for="fname"&gt;Nombre:&lt;/label&gt;&lt;br&gt;
+            &lt;input type="text" id="fname" name="fname"&gt;
+            &lt;br&gt;
+            &lt;label for="lname"&gt;Apellidos:&lt;/label&gt;&lt;br&gt;
+            &lt;input type="text" id="lname" name="lname"&gt;
+        &lt;/form&gt;</pre>
+    <div class="codigo">
+        <form>
+            <label for="fname">Nombre:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Apellidos:</label><br>
+            <input type="text" id="lname" name="lname">
+        </form>
+    </div>
+    <h2>Tipos de entradas</h2>
+    <p>Como hemos dicho antes existen diferentes tipos de entrada, para indicar estos tipos de entrada se utiliza 
+        el atributo type.
+    </p>
+    <p>Los diferentes tipos de entrada son:</p>
+    <ul>
+        <li>text</li>
+        <li>radio</li>
+        <li>checkbox</li>
+        <li>submit</li>
+        <li>button</li>
+        <li>date</li>
+        <li>color</li>
+        <li>datetime-local</li>
+        <li>email</li>
+        <li>file</li>
+        <li>hidden</li>
+        <li>image</li>
+        <li>month</li>
+        <li>password</li>
+        <li>range</li>
+        <li>reset</li>
+        <li>search</li>
+        <li>tel</li>
+        <li>time</li>
+        <li>url</li>
+        <li>week</li>
+        
+    </ul>
+
+    <h2>Atributos del elemento Form</h2>
+    <h2>Otros elementos de entrada para formularios:</h2>
+    <h3>ComboBox: Select, option </h3>
+    <h3>textArea</h3>
+    <h3>fielset y legend</h3>
+    <h2>Recibir datos del Formulario</h2>
+    Un formulario recoge datos introducidos por el usuario y los envía a un programa para tratarlos según las necesidades de cada caso. Desde HTML podemos recoger los datos mediante la etiqueta form que hemos visto en esta unidad, pero el tratamiento de los datos se realiza mediante programación web (PHP, JAVA, ...) que es algo que queda fuera de este curso. Por lo tanto sólo vamos a ver brevemente los fundamentos de este proceso.
+
+Para entender el proceso debemos saber que una página web se ejecuta en el ordenador del usuario (cliente) mediante el programa navegador web (Chrome, Firefox, ...) y al pulsar en el botón que envía el formulario, se envían los datos a través de internet (protocolo HTTP) a un ordenador especial, llamado servidor, este ejecuta el programa especificado en el atributo action. El programa realiza las operaciones previstas y devuelve una respuesta al ordenador del usuario, también a través de internet mediante HTTP.
+
+Este proceso de comunicación tiene lugar de forma síncrona, es decir, el cliente y el servidor no están conectados permanentemente, aunque la respuesta es tan rápida que da la impresión que si lo sea, en realidad cada uno envía una petición y espera a que el otro responda, sin tener ocupada la línea de comunicación de forma continua. Por esto, el cliente y el servidor deben establecer mecanismos para intercambiar los datos durante todo el proceso. Esto está relacionado con el método que indiquemos en el formulario (get, post) pero es algo de lo que se encarga el protocolo de comunicación HTTP y donde nosotros no intervenimos a nivel de HTML. En conjunto, este proceso se conoce como arquitectura cliente/servidor con la que funcionan las páginas web.
+
+
+
+Lo más usual es que el formulario envíe los datos a un programa del servidor pero también puede enviarlos a un programa que se ejecute en el ordenador del cliente.
+
+Vamos a ver dos sencillos ejemplos de ambos casos, uno con PHP en el servidor y otro con Javascript en el cliente.
+<h2> Problemas de seguridad con los formularios</h2>
+Al enviar datos al servidor utilizando un formulario debemos tener en cuenta los problemas de seguridad que conlleva. De hecho, la mayoría de los ataques maliciosos se realizan a través de formularios, por lo tanto es un problema muy serio que hay que tener en cuenta y que necesitaría un curso completo para tratarlo en profundidad, aquí solo vamos a dar unas ideas básicas.
+
+El problema está en el mal uso que se puede hacer de los formularios, no en los propios formularios. Un formulario usado normalmente no supone ningún problema de seguridad, el problema está en que un usuario malintencionado escriba código malicioso en los campos del formulario.
+
+Hay varios tipos de ataques, los ataques XSS y CSRF se basan en introducir código malicioso utilizando instrucciones de javascript u otros lenguajes de forma que cuando el programa recibe los datos del formulario en lugar de, por ejemplo, un apellido está recibiendo un pequeño programa que se ejecutará dentro del servidor.
+
+Otro tipo de ataque es SQL injection que es similar al anterior pero en este caso se intenta introducir código SQL para que se ejecute dentro del sistema de base de datos del servidor.
+
+Para evitar estos ataques hay que tomar precauciones, la más usada es filtrar todos los datos enviados desde los formularios, es algo que hay que realizar siempre, no podemos pensar que nuestros usuarios no van a intentar dañarnos.
+
+Para filtrar los datos existen muchas técnicas diversas, las más simples consisten en utilizar las instrucciones de filtrado (desinfección) que poseen muchos lenguajes, y otras más avanzadas las encontramos en las funciones que proporcionan los frameworks.
+<h2>Formularios y Captcha</h2>
+Un problema que se presenta en determinadas páginas que utilizan formularios es que un programa (robot) pueda responder y enviar el formulario en lugar de un ser humano. Esto puede ser problemático en diversos tipos de situaciones, por ejemplo en una página para darse de alta en un servicio (correo, foro, etc.) ya que si un robot es capaz de dar de alta miles de cuentas cada hora puede colapsar el sistema, o hacer un uso fraudulento posteriormente. Otros ejemplos serían contestar encuestas online de forma engañosa, participar en foros, etc.
+
+Para evitar este problema se han hecho populares los CAPTCHA ( Completely Automated Public Turing test to tell Computers and Humans Apart ) que no son más que una prueba que un robot no pueda superar, de esta forma evitaríamos que enviase el formulario. Los CAPTCHA más usados se basan en mostrar una imagen con letras distorsionadas que sean dificiles de distinguir, con lo cual un programa automático de reconocimiento de caracteres (OCR) no podrá identificarlas y no pasará la prueba, otro tipo de prueba es hacer preguntas sobre una imagen que sean difíciles de responder para un robot, o hacer preguntas genéricas, etc.
+
+captcha
+
+La fiabilidad del CAPTCHA no es del 100% y siempre es posible que alguien sea capaz de programar un robot para resolver un tipo de CAPTCHA concreto. Pero en general son un método bastante seguro para solucionar o minimizar el problema, todo depende de lo bien hecho que esté el CAPTCHA.
+
+Existen CAPTCHA de uso público y gratuito, como reCAPTCHA
+</body>
+
+</html>

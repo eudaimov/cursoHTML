@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .capitulos {
+            counter-reset: section;
+        }
+
+        .capitulo::before {
+            counter-increment: section;
+            content: "Tema " counter(section, upper-roman) "."
+        }
+
+
+        .titulo {
+            counter-reset: myseccion;
+        }
+
+        .seccion {
+            counter-reset: articulo;
+        }
+
+        .seccion::before {
+            counter-increment: myseccion;
+            content: "Seccion " counter(myseccion, upper-roman) ".";
+        }
+
+        .articulo::before {
+            counter-increment: articulo;
+            content: counter(myseccion, upper-roman) ". " counter(articulo) ". Título artículo";
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Listas</h1>
+    <h2>Introducción</h2>
+    <p>Con este tipo de etiquetado se pretende clasificar todos aquellos contenidos que pretende ser un listado</p>
+    <p>Existe tres tripos de listas</p>
+    <ul>
+        <li>Listas Ordenadas</li>
+        <li>Listas Desordenadas</li>
+        <li>Lista de términos o conceptos</li>
+    </ul>
+    <h2>Creación de Listas Desordenadas</h2>
+
+    <p>Comienzan con la etiqueta &lt;ul&gt; y terminan por esta misma etiqueta &lt;/ul&gt;</p>
+    <p>Cada elemento de la lista va envuelto a su vez por la etiqueta &lt;li&gt; &lt;/li&gt;</p>
+
+    <p>Por ejemplo:</p>
+    <pre class="codigo">
+            &lt;ul&gt;
+                &lt;li&gt;Café&lt;/li&gt;
+                &lt;li&gt;Leche&lt;/li&gt;
+                &lt;li&gt;Chocolate&lt;/li&gt;
+            &lt;/ul&gt;</pre>
+    <p></p>
+    <div class="codigo">
+        <ul>
+            <li>Café</li>
+            <li>Leche</li>
+            <li>Chocolate</li>
+        </ul>
+    </div>
+    <p>Para cambiar la forma de la viñeta se emplea dentro del atributo style la propiedad list-style-type:</p>
+    <p>Los tipos de valores son:</p>
+    <ul>
+        <li>disc: Para disco</li>
+        <li>square: Para cuadrado</li>
+        <li>none: Sin viñeta</li>
+        <li>Hay muchos otros: pero se suelen emplear en listas ordenadas, para ver mas pulsa <a
+                href="https://www.w3schools.com/cssref/pr_list-style-type.asp">aquí</a></li>
+    </ul>
+
+    <h2>Creación de listas Ordenadas</h2>
+
+    <p>Comienzan con la etiqueta &lt;ol&gt; y terminan por esta misma etiqueta &lt;/ol&gt;</p>
+    <p>Cada elemento de la lista va envuelto a su vez por la etiqueta &lt;li&gt; &lt;/li&gt;</p>
+
+    <p>Por ejemplo:</p>
+    <pre class="codigo">
+                &lt;ol&gt;
+                    &lt;li&gt;Café&lt;/li&gt;
+                    &lt;li&gt;Leche&lt;/li&gt;
+                    &lt;li&gt;Chocolate&lt;/li&gt;
+                &lt;/ol&gt;</pre>
+    <p></p>
+    <div class="codigo">
+        <ol>
+            <li>Café</li>
+            <li>Leche</li>
+            <li>Chocolate</li>
+        </ol>
+    </div>
+    <p>Para cambiar la forma de la numeración se emplea dentro del atributo type, aunque también se puede usar el
+        atributo style la propiedad list-style-type:</p>
+    <p>Los tipos de valores son:</p>
+    <ul>
+        <li>1: Para números</li>
+        <li>A: Para letras en Mayúsculas</li>
+        <li>a: Para letras en minúsculas</li>
+        <li>I: Sin viñeta</li>
+        <li>i: Para números romanos en minúscula</li>
+
+    </ul>
+    <p>Para comenzar en un número determinado el atributo start</p>
+    <h2>Lista de conceptos</h2>
+    <p>
+        La&lt;dl>etiqueta define la lista de descripciones, la etiqueta &lt;dt&gt; define el término (nombre) y la etiqueta
+        &lt;dd&gtdescribe cada término, es decir, nos da la definición:
+        </p>
+        <pre class="codigo">
+            &lt;dl&gt;
+                &lt;dt&gt;Coffee&lt;/dt&gt;
+                &lt;dd&gt;- black hot drink&lt;/dd&gt;
+                &lt;dt&gt;Milk&lt;/dt&gt;
+                &lt;dd&gt;- white cold drink&lt;/dd&gt;
+              &lt;/dl&gt;
+        </pre>
+        <div class="codigo">
+            <dl>
+                <dt>Coffee</dt> <dd>- black hot drink</dd>
+                <dt>Milk</dt>   <dd>- white cold drink</dd>
+              </dl>
+        </div>
+
+        <h2>Contadores CSS</h2>
+        <p>Primer Ejemplo:</p>
+        <pre class="codigo">
+                .capitulos{
+                    counter-reset: section;
+                }
+                .capitulo::before{
+                    counter-increment: section;
+                    content: "Tema " counter(section, upper-roman) "."
+                }</pre>
+        <div class="codigo capitulos">
+            <p class="capitulo"></p>
+            <p class="capitulo"></p>
+            <p class="capitulo"></p>
+            <p class="capitulo"></p>
+            <p class="capitulo"></p>
+        </div>
+        <p>Segundo ejemplo:</p>
+        <pre class="codigo">
+                .titulo{
+                    counter-reset: myseccion;
+                }
+                .seccion{
+                    counter-reset: articulo;
+                }
+               .seccion::before{
+                    counter-increment: myseccion;
+                    content: "Sección " counter(myseccion, upper-roman) ".";
+                }
+                .articulo::before{
+                    counter-increment: articulo;
+                    content:  counter(myseccion, upper-roman) ". " 
+                        counter(articulo) ". Título artículo";
+                }</pre>
+
+        <div class="codigo titulo">
+            <p class="seccion"></p>
+            <p class="articulo"></p>
+            <p class="articulo"></p>
+            <p class="articulo"></p>
+            <p class="seccion"></p>
+            <p class="articulo"></p>
+            <p class="articulo"></p>
+            <p class="articulo"></p>
+            <p class="seccion"></p>
+            <p class="articulo"></p>
+            <p class="articulo"></p>
+            <p class="articulo"></p>
+        </div>
+        <p>El upper-roman se puede sustituir por todos los valores que se pueden atribuir a la propiedad list-style-type
+        </p>
+</body>
+
+</html>

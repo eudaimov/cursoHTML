@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h2>Estructura</h2>
+    <section>
+        <p>
+            Al hablar de la estructura de una página web &lt;html&gt; podemos distinguir dos partes principales, la
+            cabecera &lt;head&gt; y el cuerpo &lt;body&gt;. La cabecera contiene información importante para la propia
+            página pero que el usuario no ve directamente (salvo el título), y en el cuerpo está el contenido visible de
+            la página.
+        </p>
+
+        <p>
+            Vamos a ver las zonas más importantes que hay dentro de ambas partes, para ello utilizaremos el siguiente
+            esquema:
+        </p>
+
+        <p>
+            En la cabecera tenemos etiquetas para definir los metadatos &lt;meta> como el juego de caracteres (charset)
+            y el
+            viewport, a continuación el título &lt;title> y enlaces a archivos de hojas de estilo &lt;link> y Javascript
+            &lt;script>. Algunas de estas etiquetas son obligatorias y otras opcionales, pero con reglas en cuanto a
+            donde deben colocarse.
+            Englobando la cabecera y el cuerpo tenemos la etiqueta &lt; html>.Para definir el tipo de documento se
+            utiliza
+            la declaración!DOCTYPE.
+        </p>
+
+        <p>
+            Dentro del cuerpo &lt; body > tenemos todo el contenido de la página web, por lo tanto podemos incluir en él
+            prácticamente todas las etiquetas de HTML, sin ninguna regla en cuanto al orden de las etiquetas, sin
+            embargo, es conveniente dar una estructura lógica a la página mediante el uso adecuado de las etiquetas
+            semánticas.Este tipo de etiquetas permiten definir cabeceras &lt; header>, cuerpo principal &lt; main>,
+            secciones &lt; section>, artículos &lt; article>, contenido adicional &lt; aside> y pies &lt; footer>.Dentro
+            de cada
+            una de estas partes podemos colocar las etiquetas que incorporan el contenido, párrafos
+            &lt; p>, títulos(h1, h2, ...), listas, tablas, imágenes, vídeos, ... Si necesitamos
+            hacer algún tipo de agrupación de etiquetas que no está contemplado por las
+            etiquetas semánticas disponemos de la etiqueta &lt; div> que crea un contenedor sin
+            significado semántico.
+        </p>
+        <p>
+            Las etiquetas semánticas no conllevan ninguna característica de formato ni de ubicación, pero sí tienen un
+            significado semántico que puede ser interpretado por los buscadores y por otro tipo de programas(lectura por
+            voz, accesibilidad, ...)
+        </p>
+        <p>
+            Otra forma de representar la estructura de una página web es mediante un árbol de nodos, como puedes ver en
+            la
+            figura siguiente
+        </p>
+        <p class="centrado" width="100%"><img src="img/arbol-html.svg" alt="árbol de nodos" height="300px"></p>
+
+        <p>Ver Ejemplo visual:
+            <a href="Ejemplos/ejemploNodos.html">Aquí</a>
+        </p>
+    </section>
+
+</body>
+
+</html>

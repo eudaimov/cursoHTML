@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Ejemplo Nodos</title>
+    <style>
+        *{
+            padding: 0.5em;
+            margin: 0.5em;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        *{ border: 2px dotted red; background-color: gray;}
+        *>*{border: 2px dotted orange; background-color: orange;}
+        *>*>*{border: 2px dotted yellow; background-color: yellow;}
+        *>*>*>*{border: 1px solid yellowgreen; background-color:yellowgreen;}
+        *>*>*>*>*{border: 1px solid green;background-color: green;}
+        *>*>*>*>*>*{border: 1px solid blueviolet;background-color: blueviolet;}
+
+
+    </style>
+</head>
+"Codigo fuera del body"
+<body>
+    Body
+    <main>
+        Main Principal
+        <article>Artículo Interno
+            <section>Seccion Interna
+                <p>Párrafo</p>
+                <p>Segundo parrafo<span>elemento interno</span></p>
+            </section>
+        </article>
+    </main>
+    <footer>Pie de página</footer>
+
+</html>

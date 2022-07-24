@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiqueta Head</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body>
+    <h1>Etiqueta Head (Meta)</h1>
+    <p>
+        La etiqueta head sirve para agrupar los datos de la cabecera, entre la etiqueta de inicio
+        &lt;head&gt; y la de fin &lt;/head&gt; se pueden colocar las etiquetas meta, title, link, script y base.
+    </p>
+    <p>
+        Este conjunto de etiquetas aportan información para que el navegador pueda interpretar mejor la página web. La
+        mayor
+        parte de esta información no es visible directamente para el usuario, salvo el title.
+    </p>
+
+    <p>Etiquetas Meta</p>
+    <p>
+    <p>
+
+    </p>La etiqueta meta sirve para aportar información adicion&lt;l al navegador a la hora de procesar la página, es lo
+    que se
+    conoce como metadatos. Esta etiqueta no tiene etiqueta de cierre, se cierra con />. La forma de la etiqueta es:</p>
+    <pre class="codigo">
+        &lt;meta contenido="valor" /&gt;</pre>
+        
+    <p>
+        donde contenido y valor pueden ser cualquier texto, en principio no hay restricciones
+         estrictas al respecto, podemos crear una pareja contenido/valor según nuestras necesidades, por ejemplo, al
+        crear un servicio web.
+     
+    </p>
+    <p>
+        Los metadatos no se muestran al usuario pero son analizados por el navegador, los buscadores o servicios web.
+    </p>
+    <p>
+        Algunos de los datos más frecuentes que se suelen especificar son los siguientes:
+    </p>
+
+    <p>
+        Para indicar el juego de caracteres empleado por la página, se recomienda usar utf-8,
+        anteriormente se usaba ISO-8859-1, para los idiomas occidentales.
+    </p>
+    <p class="codigo">
+        &lt;meta charset="utf-8"&gt;
+    </p>
+
+
+    <p>
+        Para especificar las características del tamaño de la pantalla para ajustar mejor las paginas con diseño
+        adaptable, sobre todo para dispositivos móviles.
+    </p>
+    <p class="codigo">
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </p>
+
+
+    <p>
+        Para indicar el autor de la página web.
+    </p>
+    <p class="codigo"> &lt;meta name="author" content="aulaClic"&gt;</p>
+
+
+    <p>
+        Para indicar la descripción del contenido de la página web.
+    </p>
+    <p class="codigo">&lt;meta name="description" content="aulaClic. Cursos de informática gratis" /></p>
+
+
+    <p>
+        Es una lista de palabras claves relacionadas con el contenido de la página web. Esta información, junto con
+        las dos anteriores es utilizada fundamentalmente por los buscadores.
+    </p>
+
+    <p class="codigo"> &lt;meta name="keywords" content="curso base datos ofimática diseño" /&gt;</p>
+    <p>
+        Para indica el programa que ha generado la página, la utilizan los
+        generadores de contenido como WordPress, Joomla, etc.
+    </p>
+
+    <p class="codigo">
+        &lt;meta name="generator" content="Joomla" /&gt;
+    </p>
+    <p>
+
+        Para dar información para los buscadores acerca del uso de programas robot
+        que indexan las páginas web.
+    </p>
+
+    <p class="codigo">
+        &lt;meta name="robots" content="index, follow" /&gt;
+    </p>
+    <p>
+
+        Para proporcionar información que va a ser tratada como cabecera por la página web, por ejemplo,
+        para indicar que la página web debe ser cargada de nuevo (refresh) cada 50 segundos, por ejemplo para una página
+        con datos de la bolsa que debe ser actualizada frecuentemente.
+    </p>
+    <p class="codigo">
+        &lt;meta http-equiv="refresh" content="50"&gt;
+    </p>
+    <p>
+        Para indicar que al cabo de x sg, se
+        redireccione a la página indicada. Es útil si hemos cambiado la dirección de la página y queremos redirigir al
+        usuario a otra página de forma automática al cabo de unos segundos, para que pueda leer un mensaje de aviso. Si
+        no queremos que lea nada y la redirección sea inmediata, escribiremos un cero en los segundos.
+    </p>
+    <p class="codigo">
+        &lt;meta http-equiv="refresh" content="10;URL='http://google.es/'" /&gt;
+    </p>
+    <h3>Etiqueta link</h3>
+
+    <p>Existen diferentes tipos que se definen con el atributo <em>rel</em> </p>
+    <p>
+        La etiqueta link sirve para enlazar la página web con otros archivos. Esta etiqueta no tiene etiqueta de cierre,
+        se cierra con >. Puede haber varias etiquetas link en la cabecera de una página web, pero no puede aparecer en
+        el cuerpo.
+    </p>
+    <p>El usa más frecuente es para enlazar con las hojas de estilos, por ejemplo:</p>
+
+    <pre class="codigo">
+        &lt;link rel="stylesheet" type="text/css" href="css/mi_hoja_estilo.css"&gt;</pre>
+
+
+    <p>
+        Los parámetros son los siguientes:
+    </p>
+    <p>
+
+        - href, igual que para los hiperenlaces, nos dice la ruta donde se encuentra el archivo que estamos enlazando.
+    </p>
+    <p>
+        - rel, indica el tipo de recurso o relación, puede tomas varios valores (alternate, author, help, icon, license,
+        next, stylesheet, ...).
+
+    </p>
+    <p>
+        Se utiliza stylesheet para enlazar con una hoja de estilo CSS. Y icon para enlazar con el gráfico que se
+        utilizará
+        como icono en las pestañas de los navegadores y en otros lugares. Con alternate podemos indicar que se trata de
+        una
+        hoja de estilo alternativa.
+
+    </p>
+    <p>
+        - type, indica el tipo de media del archivo, por ejemplo, type="text/css", para hojas de estilo, aunque no es
+        obligatorio.
+
+    </p>
+
+    <p>
+        - media, permite especificar una condición Media Queries, por ejemplo, si queremos que la hoja de estilo se
+        enlace sólo para las pantallas que como máximo tengan 800 px de ancho:
+
+    </p>
+    <pre class="codigo">
+        &lt;link rel="stylesheet" media="(max-width: 800px)" href="pantalla_800.css" /&gt;</pre>
+    
+
+    <p>Dentro de las etiqueta link podemos encontrar también iconos de páginas web también conocidos como Favicon</p>
+    <pre class="codigo">
+        &lt;link rel="icon" type="image/x-icon" href="/images/favicon.ico"&gt;</pre>
+
+    <h3>Etiqueta title</h3>
+    <p>
+        Esta etiqueta es obligatoria y se muestra en la pestaña del navegador, no forma parte del cuerpo de la página.
+        Sólo se puede escribir texto y es importante para que los buscadores conozcan el tema de la página. Los
+        resultados de las búsquedas muestran como primera línea lo que pongamos en esta etiqueta title, por lo tanto es
+        muy importante elegir bien este texto ya que puede hacer que los usuarios visiten o no nuestra página.
+    </p>
+    <p>
+        Por ejemplo:
+    </p>
+    <pre class="codigo">
+        &lt;title&gt; Cursos de informática gratis y de calidad. Curso on-line de Excel, Access, Word y PowerPoint</title>
+    </pre>
+    <p>
+        Aunque en la pestaña del navegador sólo se ven dos o tres palabras, es mejor que el título sea más largo porque
+        al colocar el curso encima de la pestaña se muestra el título completo; y también porque aparecerá en los
+        resultados de los buscadores, como acabamos de decir.
+    </p>
+
+    <h3>Etiqueta Script</h3>
+        La etiqueta script permite incluir código de Javascript en la página web. Se puede incluir un atributo src con
+        el archivo que contiene el código, por ejemplo:
+        <pre class="codigo">
+            &lt;scrip&gt; src="mi_archivo_utilidades.js">&lt;/script&gt;</pre>
+
+        También se puede escribir directamente el código entre la etiqueta de inicio
+        &lt;script&gt; y la de fin &lt;/script>, por ejemplo:
+
+        <pre class="codigo">
+            &lt;script>document.getElementById("prueba").innerHTML = "Hola amigo!"; &lt;/script></pre>
+
+       <p>
+        La etiqueta script puede ir en la cabecera y en el cuerpo de la página.
+       </p>
+
+</body>
+
+</html>
