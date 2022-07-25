@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Títulos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body{
+            counter-reset: contadorh1;
+        }
+        h1.Titulo1::before{
+            counter-increment: contadorh1;
+            content: counter(contadorh1)". ";
+        }
+
+        h1{
+            counter-reset: contadorh2;
+        }
+        h2.Titulo2::before{
+            counter-increment: contadorh2;
+            content: counter(contadorh1)"." counter(contadorh2)". ";
+        }
+        h2{
+            counter-reset: contadorh3;
+        }
+        h3.Titulo3::before{
+            counter-increment: contadorh3;
+            content: counter(contadorh1)"." counter(contadorh2)"."counter(contadorh3)". ";
+        }
+        h3{
+            counter-reset: contadorh4;
+        }
+        h4.Titulo4::before{
+            counter-increment: contadorh4;
+            content: counter(contadorh1)"." counter(contadorh2)"."counter(contadorh3)"."counter(contadorh4)". ";
+        }
+
+        h4{
+            counter-reset: contadorh5;
+        }
+        h5.Titulo5::before{
+            counter-increment: contadorh5;
+            content: counter(contadorh1)"." counter(contadorh2)"."counter(contadorh3)"."counter(contadorh4)"."counter(contadorh5)". ";
+        }
+        h5{
+            counter-reset: contadorh6;
+        }
+        
+        h6.Titulo6::before{
+            counter-increment: contadorh6;
+            content: counter(contadorh6, lower-latin)") "
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Títulos: h1 h2 h3 h4 h5 h6</h1>
+    <p>Los encabezados HTML son títulos o subtítulos que desea mostrar en una página web.</p>
+    <p>
+        Los encabezados HTML se definen con las etiquetas &lt;h1>to .&lt;h6>
+    </p>
+    <p>
+        &lt;h1>define el encabezado más importante. &lt;h6>define el encabezado menos importante.
+    </p>
+    <p>Los motores de búsqueda utilizan los encabezados para indexar la estructura y el contenido de sus páginas web.
+    </p>
+    <p>
+        Los usuarios a menudo hojean una página por sus títulos. Es importante utilizar encabezados para mostrar la
+        estructura del documento.
+    </p>
+
+
+    <p>Los encabezados &lt;h1> deben usarse para los encabezados principales, seguidos de &lt;h2>los encabezados, luego los menos
+        importantes &lt;h3>, y así sucesivamente.</p>
+    <p>Sólo existe un máximo de seis niveles, aunque gracias a las clases y la creación de estilos propios podríamos crear más niveles</p>
+    <p>
+
+        Nota: Use encabezados HTML solo para encabezados. No use encabezados para hacer que el texto sea GRANDE
+        o en negrita .
+    </p>
+    <p>
+        Encabezados más grandes
+        Cada encabezado HTML tiene un tamaño predeterminado. Sin embargo, puede especificar el tamaño de
+        cualquier encabezado con el  atributo style, utilizando la propiedad CSS font-size:
+    </p>
+    
+
+    <p>Por ejemplo:</p>
+    <pre class="codigo">
+        &lt;!--Dentro del elemento head--&gt;
+        &lt;style&gt;
+            body{
+                counter-reset: contadorh1;
+            }
+            h1.Titulo1::before{
+                counter-increment: contadorh1;
+                content: counter(contadorh1)". ";
+            }
+    
+            h1{
+                counter-reset: contadorh2;
+            }
+            h2.Titulo2::before{
+                counter-increment: contadorh2;
+                content: counter(contadorh1)"." counter(contadorh2)". ";
+            }
+            h2{
+                counter-reset: contadorh3;
+            }
+            h3.Titulo3::before{
+                counter-increment: contadorh3;
+                content: counter(contadorh1)"." counter(contadorh2)"."counter(contadorh3)". ";
+            }
+            h3{
+                counter-reset: contadorh4;
+            }
+            h4.Titulo4::before{
+                counter-increment: contadorh4;
+                content: counter(contadorh1)"." counter(contadorh2)"."counter(contadorh3)"."counter(contadorh4)". ";
+            }
+    
+            h4{
+                counter-reset: contadorh5;
+            }
+            h5.Titulo5::before{
+                counter-increment: contadorh5;
+                content: counter(contadorh1)"." counter(contadorh2)"."counter(contadorh3)"."counter(contadorh4)"."counter(contadorh5)". ";
+            }
+            h5{
+                counter-reset: contadorh6;
+            }
+            
+            h6.Titulo6::before{
+                counter-increment: contadorh6;
+                content: counter(contadorh6, lower-latin)") ";
+            }
+        &lt;/style&gt;
+        &lt;!--Dentro del elemento body--&gt;
+        &lt;h1 class="Titulo1"&gt;Título h1&lt;/h1&gt;
+        &lt;h2 class="Titulo2"&gt;Título h2&lt;/h2&gt;
+        &lt;h2 class="Titulo2"&gt;Título h2&lt;/h2&gt;
+        &lt;h1 class="Titulo1"&gt;Titulo h1&lt;/h1&gt;
+        &lt;h2 class="Titulo2"&gt;Título h2&lt;/h2&gt;
+        &lt;h3 class="Titulo3"&gt;Titulo h3&lt;/h3&gt;
+        &lt;h4 class="Titulo4"&gt;Titulo h4&lt;/h4&gt;
+        &lt;h5 class="Titulo5"&gt;Titulo h5&lt;/h5&gt;
+        &lt;h6 class="Titulo6"&gt;Titulo h6&lt;/h6&gt;
+    </pre>
+
+
+
+
+    <h1 class="Titulo1">Título h1</h1>
+    <h2 class="Titulo2">Título h2</h2>
+    <h2 class="Titulo2">Título h2</h2>
+    <h1 class="Titulo1">Titulo h1</h1>
+    <h2 class="Titulo2">Título h2</h2>
+    <h3 class="Titulo3">Titulo h3</h3>
+    <h4 class="Titulo4">Titulo h4</h4>
+    <h5 class="Titulo5">Titulo h5</h5>
+    <h6 class="Titulo6">Titulo h6</h6>
+    <h6 class="Titulo6">Titulo h6</h6>
+    <h6 class="Titulo6">Titulo h6</h6>
+    <h6 class="Titulo6">Titulo h6</h6>
+
+    <p>Para añadir un estilo de numeración concreto ver <a href="https://www.w3schools.com/cssref/pr_list-style-type.asp">esto</a></p>
+
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reglas de vital Importancia</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Reglas de vital Importancia: Accesibilidad</h1>
+    <p>¡Escriba siempre el código HTML teniendo en cuenta la accesibilidad!</p>
+    <section>
+        <h2>La importancia de la semántica:</h2>
+        <p>Proporcione al usuario una buena manera de navegar e interactuar con su sitio. Haga que su código HTML sea lo más
+            semántico posible.</p>
+        <p>HTML semántico significa usar elementos HTML correctos para su propósito correcto tanto como sea posible. Los
+            elementos semánticos son elementos con un significado; si necesita un botón, use el &lt;button>elemento (y
+            no un &lt;div>elemento).</p>
+        <p>
+            El HTML semántico brinda contexto a los lectores de pantalla, que leen el contenido de una página en voz
+            alta.
+        </p>
+        <p> Con el ejemplo del botón en mente:</p>
+        <ul>
+            <li>Los botones tienen un estilo más adecuado por defecto</li>
+            <li>Un lector de pantalla lo identifica como un botón.</li>
+            <li>enfocable</li>
+            <li>Clicable</li>
+        </ul>
+        <p> También se puede acceder a un botón para las personas que dependen de la navegación solo con el teclado; se
+            puede hacer clic con el mouse y las teclas, y se puede tabular entre (usando la tecla de tabulación en el
+            teclado).</p>
+        <p> Ejemplos de elementos no semánticos :&lt;div&gt; y &lt;span&gt;. Estos elementos no nos dicen nada sobre su
+            contenido. </p>
+        <p>Ejemplos de elementos semánticos : &lt;form>, &lt;table>y &lt;article>. Definen claramente su contenido.</p>
+    </section>
+    <section>
+        <p>Los encabezados se definen con las etiquetas &lt;h1>to :&lt;h6></p>
+        <p> Los motores de búsqueda utilizan los encabezados para indexar la estructura y el contenido de sus páginas
+            web.</p>
+        <p>Los usuarios hojean sus páginas por sus encabezados. Es importante utilizar encabezados para mostrar la
+            estructura del documento y las relaciones entre las diferentes secciones. </p>
+        <p>
+            Los lectores de pantalla también usan encabezados como una herramienta de navegación. Los diferentes tipos
+            de encabezado especifican el contorno de la página. los encabezados &lt;h1%gt; deben usarse para los
+            encabezados
+            principales, seguidos de los encabezados &lt;h2&gt;, luego los menos importantes &lt;h3>, y así
+            sucesivamente.
+        <p>Nota: Use encabezados HTML solo para encabezados. No use encabezados para hacer que el texto sea
+            GRANDE o en negrita .</p>
+        </p>
+    </section>
+    <section>
+        <h2>Texto alternativo</h2>
+        <p>El atributo alt proporciona un texto alternativo para una imagen, si el usuario por alguna razón no puede
+            verla (debido a una conexión lenta, un error en el src atributo o si el usuario usa un lector de pantalla).
+        </p>
+        <p>El valor del atributo alt debe describir la imagen:
+            Si un navegador no puede encontrar una imagen, mostrará el valor del alt atributo:</p>
+        
+    </section>
+    <section>
+        <h2>Declarar idioma:</h2>
+        <p>Siempre debe incluir el lang atributo dentro de la &lt;html>etiqueta, para declarar el idioma de la página web.</p>
+        <p>Esto está destinado a ayudar a los motores de búsqueda y navegadores.
+        </p>
+        <p>El siguiente ejemplo especifica el inglés como idioma:</p>
+    </section>
+    <section>
+        <h2>
+            Usa un lenguaje claro
+        </h2>
+        <p> Utilice siempre un lenguaje claro, que sea fácil de entender. También intente evitar caracteres que un lector de
+            pantalla no pueda leer claramente. Por ejemplo:
+        </p>
+        <ul>
+            <li>Mantén las oraciones lo más cortas posible.</li>
+            <li>Evite los guiones. En lugar de escribir 1-3, escriba 1 a 3</li>
+            <li>Evite las abreviaturas. En lugar de escribir feb., escribe febrero</li>
+            <li> Evite las palabras de jerga</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Crear buen texto de enlace</h2>
+        <p> El texto de un enlace debe explicar claramente qué información obtendrá el lector al hacer clic en ese enlace.</p>
+        <p>Ejemplos:</p>
+        <p>Malos enlaces:</p>
+        
+        <p >
+            <ul>
+                <li><a href="#">Click here</a></li>
+                <li><a href="#">Read more..</a></li>
+                <li>Buy tickets to Mars <a href="#">here</a></li>
+              </ul>
+        </p>
+        <p>Buenos enlaces:</p>
+        <ul>
+            <li><a href="#">Find out more about the HTML language</a></li>
+            <li>Read more about <a href="#">how to eat healthy</a></li>
+            <li><a href="#">Buy tickets to Mars here</a></li>
+        </ul>
+        
+       
+        
+    </section>
+    <section>
+        <h2>Conclusión:</h2>
+        <p>El resumen de buenas prácticas es el de intentar hacer la página lo más accesible posible.</p>
+        <p>Se recomienda hacer el curso de accesibilidad. <a href="https://www.w3schools.com/accessibility/">Curso
+                w3schools de accesibilidad</a></p>
+    </section>
+</body>
+
+</html>

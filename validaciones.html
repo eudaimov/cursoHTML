@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validaciones</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Validaciones</h1>
+    <p>Al escribir código HTML podemos cometer errores, estos errores pueden ser de varios tipos, los errores
+        sintácticos son los que se producen cuando no escribimos las etiquetas de
+        HTML según las reglas, y los errores <span class="resaltado">lógicos</span> son los que, aun
+        siguiendo las reglas, producen un resultado no deseado.</p>
+    <p>Por ejemplo un error sintáctico sería no escribir la etiqueta de cierre <span
+            class="valores">&lt;/p&gt;</span> de un párrafo. Un error lógico sería escribir mal el
+        valor por defecto en un formulario, por ejemplo, en el campo &quot;edad&quot; lugar de<span class="valores">
+            value=&quot;16&quot;</span>, escribimos <span class="valores">value=&quot;26&quot;</span>.</p>
+    <p>Los errores sintácticos son más sencillos de encontrar puesto que suelen ser detectados por los
+        editores de código modernos y también por las herramientas de <span
+            class="resaltado">validación</span>, en ocasiones producen un desajuste visible en la página
+        web, y en contadas ocasiones provocan un mensaje de error del navegador</p>
+    <p>Los errores lógicos pueden ser más difíciles de detectar ya que no suelen dar mensajes de
+        error, y muchas veces producen un resultado aparentemente correcto. Por ejemplo, en el caso anterior, si
+        escribimos <span class="valores">value=&quot;26&quot;</span>, el programa que trata el formulario
+        asignará una edad de 26 en lugar de 16 y el sujeto recibirá el tratamiento correspondiente a una
+        persona &quot;mayor de edad&quot;, en lugar del que le correspondería como &quot;menor de edad&quot;,
+        pero no sería algo fácil de detectar. </p>
+    <p>Aunque hemos dicho que los errores sintácticos son más sencillos de encontrar, también es
+        cierto que muchas veces pasan <span class="resaltado">desapercibidos</span> ya que no producen ningún
+        error visible. Esto es debido a que los navegadores web encargados de ejecutar el código HTML son muy
+        <span class="resaltado">permisivos</span> con estos errores y disponen de reglas internas que permiten obviar el
+        error, en muchos casos producen un resultado correcto, corrigiendo el error de forma adecuada, y en otros casos
+        no son capaces de corregir el error produciendo un resultado inesperado pero sin mostrar ningún error. En
+        general, el navegador trata de mostrar la página lo mejor que puede sin mostrar mensajes de error al
+        usuario.</p>
+    <p> Un ejemplo del primer caso sería anidar comentarios, algo no permitido en HTML, si cometemos este error
+        será obviado por el navegador y no producirá ningún efecto visible en la página web.
+    </p>
+    <p>Un ejemplo del segundo caso sería olvidar cerrar una etiqueta <span class="valores">&lt;div&gt;</span>,
+        aunque el navegador no dará ningún error, es probable que al visualizar la página web se
+        produzca un descuadre en el dise&ntilde;o o algún estilo no se aplique donde queríamos. </p>
+    <p>En ambos casos, estos tipos de errores serán <span class="resaltado">detectado</span> si utilizamos una
+        herramienta de validación.</p>
+    <p>El comportamiento <span class="resaltado">permisivo</span> de los navegadores en el tratamiento de errores, en
+        general, es beneficioso porque corrige errores simples, pero en otros casos oculta errores, con lo cual hace
+        más difícil corregirlos. Por esto, siempre es conveniente <span class="resaltado">validar</span>
+        el código HTML aunque no observemos ningún error al visualizar la página.</p>
+    <p>La herramienta de validación online de código HTML de <a href="https://validator.w3.org/"
+            target="_blank">W3C</a> es de las más usadas, es totalmente gratuita y muy fácil de usar.
+        Basta introducir la dirección de la página web y nos proporcionará un listado con los
+        errores, la línea y columna del error, la descripción del error y el tipo de error (warning,
+        error, etc.). </p>
+    <p class="centrado"><img src="img/validator_html.png" width="700" height="410" alt="Validator de W3C" /></p>
+    <p>Como decíamos, los editores de código modernos también ayudan a corregir errores en el mismo
+        momento de escribir el código ya que son capaces de detectar diversos errores sintácticos, por
+        ejemplo, etiquetas sin cerrar, comillas sin cerrar, identificadores duplicados, etc.</p>
+    <p>Por supuesto, también se pueden producir errores en las <span class="resaltado">hojas de estilo
+            CSS</span>, para validarlas también existe una herramienta online de <a
+            href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C</a>.</p>
+    <p>Respecto a los errores en las hojas de estilo, una gran parte de ellos se producen porque el nombre de los
+        estilos declarados en la hoja de estilo <span class="resaltado">no concuerdan</span> con los empleados en el
+        código HTML, en estos caso lo que ocurre es simplemente que no se aplica el estilo correspondiente, lo
+        cual puede tener diversos grados de gravedad según cada caso.</p>
+    <p>También podemos cometer el error de escribir mal propiedades CSS o no utilizar bien las reglas de <span
+            class="resaltado">sintaxis</span>: llaves mal cerradas, puntos y coma mal puestos, etc.</p>
+    <p>Como vimos en la unidad 9, se pueden producir <span class="resaltado">colisiones</span> al aplicar las
+        propiedades, si no somos conscientes de estas colisiones el dise&ntilde;o no será el esperado, este tipo
+        de errores pueden ser bastante difíciles de localizar. También podemos cometer errores a la hora
+        de dise&ntilde;ar la estructura de la página por comportamientos inesperados de elementos flotantes,
+        contenedores <span class="valores">div</span>, etc. </p>
+    <p>Una forma de <span class="resaltado">buscar errores</span> de dise&ntilde;o en la estructura de la página
+        es dibujar los bordes de los todos elementos para ver qué posición ocupa cada uno, una vez
+        realizadas las comprobaciones, eliminaremos esos bordes. Para dibujar todos los bordes con unas pocas
+        líneas de código podemos usar este código CSS, propuesto por Chris Page, que lo que hace es
+        dibujar los bordes de los elementos de un color y grosor distinto según el nivel de anidamiento de cada
+        elemento, así identificaremos todos los elementos que forman la página web.</p>
+    <pre class="codigo">
+   * { outline: 2px dotted red }
+   * * { outline: 2px dotted green }
+   * * * { outline: 2px dotted orange }
+   * * * * { outline: 2px dotted blue }
+   * * * * * { outline: 1px solid red }
+   * * * * * * { outline: 1px solid green }
+   * * * * * * * { outline: 1px solid orange }
+   * * * * * * * * { outline: 1px solid blue }
+   </pre>
+    <p>Otra forma de identificar un elemento concreto es darle un color de fondo intenso para localizarlo
+        fácilmente. </p>
+    <p>Para encontrar errores también es muy útil del modo &quot;<span
+            class="resaltado">inspeccionar</span>&quot; (ctrl + mayús + i) de los navegadores (Chrome, Firefox,
+        Edge, etc.) que permite ver fácilmente el código HTML y CSS que afecta a cada elemento de la
+        página.</p>
+    <p>Aunque tiene poco que ver con el tipo de errores de los que estamos hablando es este punto, en ocasiones nuestra
+        página web se puede comportar de forma inesperada en algún <span
+            class="resaltado">navegador</span>, ya que, lamentablemente, no todos ejecutan de código de la misma
+        forma. Para minimizar este tipo de problemas conviene utilizar elementos estándar y evitar elementos o
+        propiedades experimentales, no recomendadas todavía por <span class="valores">W3C.org</span>. Para
+        identificar este tipo de errores conviene probar las páginas en distintos navegadores. También es
+        recomendable probar las páginas en distintos <span class="resaltado">dispositivos</span> de diferentes
+        tama&ntilde;os para comprobar si la página se adapta bien a cada anchura.</p>
+
+
+
+</body>
+
+</html>
