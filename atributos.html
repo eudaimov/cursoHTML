@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        table{
+            border:1px solid black
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Atributos</h1>
+    <p>Los elementos en HTML tienen atributos; estos son valores adicionales que configuran los elementos o ajustan su
+        comportamiento de diversas formas para cumplir los criterios de los usuarios.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre del Atributo</th>
+                <th>Elementos</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>accept</td>
+                <td>&lt;form&gt;, &lt;input&gt;</td>
+                <td>Lista de tipos aceptados por el servidor, usualmente un tipo de archivo.</td>
+            </tr>
+            <tr>
+                <td>accept-charset</td>
+                <td>&lt;form&gt;</td>
+                <td>Lista de juegos de caracteres soportados.</td>
+            </tr>
+            <tr>
+                <td>accesskey</td>
+                <td>Atributos Globales</td>
+                <td>Define una tecla que activa o agrega un foco al elemento.</td>
+            </tr>
+            <tr>
+                <td>action</td>
+                <td>&lt;form&gt;</td>
+                <td>La URL del programa que procesa la información enviada en el formulario.</td>
+            </tr>
+            <tr>
+                <td>align</td>
+                <td>&lt;applet&gt;, &lt;caption&gt;,
+                    &lt;col&gt;,
+                    &lt;colgroup&gt;,
+                    &lt;hr&gt;,
+                    &lt;iframe&gt;,
+                    &lt;img&gt;,
+                    &lt;table&gt;,
+                    &lt;tbody&gt; <small>(en-US)</small>,
+                    &lt;td&gt;,
+                    &lt;tfoot&gt; <small>(en-US)</small>
+                    , &lt;th&gt;, &lt;thead&gt; <small>(en-US)</small>,
+                    &lt;tr&gt;
+                </td>
+                <td>Especifica el alineamiento horizontal del elemento.</td>
+            </tr>
+            <tr>
+                <td>alt</td>
+                <td>&lt;applet&gt;, &lt;area&gt;,
+                    &lt;img&gt;,
+                    &lt;input&gt;
+                </td>
+                <td>Texto alternativo en caso de que la imagen no se pueda mostrar.</td>
+            </tr>
+            <tr>
+                <td>async</td>
+                <td>&lt;script&gt;<small>(en-US)</small>
+                </td>
+                <td>Indica que el script debería ejecutarse asincrónicamente.</td>
+            </tr>
+            <tr>
+                <td>autocomplete</td>
+                <td>&lt;form&gt;, &lt;input&gt;</td>
+                <td>Indica si los controles en este formulario pueden tener por defecto sus valores completados
+                    automáticamente por el navegador.</td>
+            </tr>
+            <tr>
+                <td>autofocus</td>
+                <td>&lt;button&gt;, &lt;input&gt;, &lt;keygen&gt;,
+                    &lt;select&gt;, &lt;textarea&gt;
+                </td>
+                <td>El elemento debería recibir foco automáticamente después de haberse cargado la página.</td>
+            </tr>
+            <tr>
+                <td>autoplay</td>
+                <td>&lt;audio&gt;, &lt;video&gt;</td>
+                <td>El audio o video debería empezar lo antes posible.</td>
+            </tr>
+            <tr>
+                <td>autosave</td>
+                <td>&lt;input&gt;</td>
+                <td>Previous values should persist dropdowns of selectable values across page loads.</td>
+            </tr>
+            <tr>
+                <td>bgcolor</td>
+                <td>&lt;body&gt;, &lt;col&gt;,
+                    &lt;colgroup&gt;, &lt;marquee&gt;, &lt;table&gt;,
+                    &lt;tbody&gt; <small>(en-US)</small>,
+                    &lt;tfoot&gt; <small>(en-US)</small>,
+                    &lt;td&gt;, &lt;th&gt;, &lt;tr&gt;
+                </td>
+                <td>
+                    Color de fondo del elemento.<br/>
+                    <strong>Nota:</strong> Este atributo se mantiene como referencia. Por favor usa la propiedad CSS background-color en su lugar.
+                </td>
+            </tr>
+            <tr>
+                <td>border</td>
+                <td>&lt;img&gt;, &lt;object&gt;, &lt;table&gt;</td>
+                <td>
+                    <p>El ancho del borde.</p>
+
+                    <div>
+                        <p><strong>Nota:</strong> Este atributo se mantiene como referencia. Por favor usa la propiedad
+                            CSS
+                            border en su lugar.</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>buffered</td>
+                <td>&lt;audio&gt;, &lt;video&gt;</td>
+                <td>Contiene un rango de tiempo multimedia almacenado.</td>
+            </tr>
+            <tr>
+                <td>challenge</td>
+                <td>&lt;keygen&gt;</td>
+                <td>Cadena de desafío que se envía junto con la clave pública.</td>
+            </tr>
+            <tr>
+                <td>charset</td>
+                <td>&lt;meta&gt;, &lt;script&gt; <small>(en-US)</small>
+                </td>
+                <td>Declara la codificación de caracteres de la página o del script.</td>
+            </tr>
+            <tr>
+                <td>checked</td>
+                <td>&lt;command&gt;,
+                    &lt;input&gt;</td>
+                <td>Indica que el elemento debería estar marcado al cargar la página.</td>
+            </tr>
+            <tr>
+                <td>cite</td>
+                <td>&lt;blockquote&gt;, &lt;del&gt;, &lt;ins&gt;, &lt;q&gt;</td>
+                <td>Contiene una URL que apunta a la fuente de la cita o cambio.</td>
+            </tr>
+            <tr>
+                <td>class</td>
+                <td>Atributo Global</td>
+                <td>Usualmente empleado con CSS para aplicar estilos a elementos con propiedades en comun.</td>
+            </tr>
+            <tr>
+                <td>code</td>
+                <td>&lt;applet&gt;</td>
+                <td>Especifica la URL del archivo de tipo applet a ser cargado y ejecutado.</td>
+            </tr>
+            <tr>
+                <td>codebase</td>
+                <td>&lt;applet&gt;</td>
+                <td>Este atributo contiene la URL absoluta o relativa del directorio donde los archivos de applets
+                    (.class)
+                    referenciados en el codigo se encuentran almacenados.</td>
+            </tr>
+            <tr>
+                <td>color</td>
+                <td>&lt;basefont&gt;, &lt;font&gt;, &lt;hr&gt;</td>
+                <td>
+                    <p>Este atributo establece el color de texto utilizando un nombre de color o en formato hexadecimal
+                        #RRGGBB.</p>
+
+                    <div>
+                        <p><strong>Nota:</strong> Este atributo se mantiene como referencia. Por favor usa la propiedad
+                            CSS
+                            color en su lugar.</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>cols</td>
+                <td>&lt;textarea&gt;</td>
+                <td>Define el número de columnas en un área de texto.</td>
+            </tr>
+            <tr>
+                <td>colspan</td>
+                <td>&lt;td&gt;, &lt;th&gt;</td>
+                <td>Define el número de columnas que una celda debe contener.</td>
+            </tr>
+            <tr>
+                <td>content</td>
+                <td>&lt;meta&gt;</td>
+                <td>Un valor asociado con http-equiv o name dependiendo del contexto.</td>
+            </tr>
+            <tr>
+                <td>contenteditable</td>
+                <td>Atributo Global</td>
+                <td>Indica si el contenido del elemento es editable.</td>
+            </tr>
+            <tr>
+                <td>contextmenu</td>
+                <td>Atributo Global</td>
+                <td>Define el ID del elemento &lt;menu&gt; que
+                    servira como menú de contexto para otro elemento.</td>
+            </tr>
+            <tr>
+                <td>controls</td>
+                <td>&lt;audio&gt;, &lt;video&gt;</td>
+                <td>Indica si el navegador debe mostrar controles de reproduccion al usuario.</td>
+            </tr>
+            <tr>
+                <td>coords</td>
+                <td>&lt;area&gt;</td>
+                <td>Un conjunto de valores que especifican las coordenadas del area.</td>
+            </tr>
+            <tr>
+                <td>data</td>
+                <td>&lt;object&gt;</td>
+                <td>Especifica la URL del recurso.</td>
+            </tr>
+            <tr>
+                <td>data-*</td>
+                <td>Atributo Global</td>
+                <td>Permite asociar atributos presonalizados a un elemento HTML.</td>
+            </tr>
+            <tr>
+                <td>datetime</td>
+                <td>&lt;del&gt;, &lt;ins&gt;, &lt;time&gt;</td>
+                <td>Indica la fecha y hora asociadas con el elemento.</td>
+            </tr>
+            <tr>
+                <td>default</td>
+                <td>&lt;track&gt;</td>
+                <td>Indica que la pista debe estar habilitada a menos que las preferencias del usuario indiquen algo
+                    diferente.</td>
+            </tr>
+            <tr>
+                <td>defer</td>
+                <td>&lt;script&gt; <small>(en-US)</small>
+                </td>
+                <td>Indica que el código debe ser ejecutado despues de que la página este cargada.</td>
+            </tr>
+            <tr>
+                <td>dir</td>
+                <td>Atributo Global</td>
+                <td>Define la dirección del texto. Los valores permitidos son ltr (Izquierda-a-Derecha) o rtl
+                    (Derecha-a-Izquierda).</td>
+            </tr>
+            <tr>
+                <td>dirname</td>
+                <td>&lt;input&gt;, &lt;textarea&gt;</td>
+                <td>Indica la dirección del texto asociada con el elemento al momento de enviar el formulario.</td>
+            </tr>
+            <tr>
+                <td>disabled</td>
+                <td>&lt;button&gt;, &lt;command&gt;,
+                    &lt;fieldset&gt;, &lt;input&gt;, &lt;keygen&gt;,
+                    &lt;optgroup&gt; <small>(en-US)</small>, &lt;option&gt;,
+                    &lt;select&gt;,
+                    &lt;textarea&gt;
+                </td>
+                <td>Indica si el usuario puede interactuar con el elemento.</td>
+            </tr>
+            <tr>
+                <td>download</td>
+                <td>&lt;a&gt;, &lt;area&gt;</td>
+                <td>Indica que el hipervínculo es utilizado para descargar un recurso.</td>
+            </tr>
+            <tr>
+                <td>draggable</td>
+                <td>Atributo Global</td>
+                <td>Define si el elemento puede ser arrastrado.</td>
+            </tr>
+            <tr>
+                <td>dropzone</td>
+                <td>Atributo Global</td>
+                <td>Indica que el elemento acepta contenido soltado en el mismo.</td>
+            </tr>
+            <tr>
+                <td>enctype</td>
+                <td>&lt;form&gt;</td>
+                <td>Define el tipo de contenido del formulario cuando el método del mismo es POST.</td>
+            </tr>
+            <tr>
+                <td>for</td>
+                <td>&lt;label&gt;, &lt;output&gt; <small>(en-US)</small>
+                </td>
+                <td>Describe elementos que pertenecen a éste.</td>
+            </tr>
+            <tr>
+                <td>form</td>
+                <td>&lt;button&gt;, &lt;fieldset&gt;, &lt;input&gt;,
+                    &lt;keygen&gt;, &lt;label&gt;,
+                    &lt;meter&gt; <small>(en-US)</small>,
+                    &lt;object&gt;, &lt;output&gt; <small>(en-US)</small>,
+                    &lt;progress&gt;, &lt;select&gt;, &lt;textarea&gt;
+                </td>
+                <td>Indica el formulario al que pertenece el elemento.</td>
+            </tr>
+            <tr>
+                <td>formaction</td>
+                <td>&lt;input&gt;, &lt;button&gt;</td>
+                <td>Indica la acción del elemento, anulando la acción definida en &lt;form&gt;.</td>
+            </tr>
+            <tr>
+                <td>headers</td>
+                <td>&lt;td&gt;, &lt;th&gt;</td>
+                <td>IDs de los elementos &lt;th&gt; que aplican a este elemento.</td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td>&lt;canvas&gt;, &lt;embed&gt;, &lt;iframe&gt;, &lt;img&gt;,
+                    &lt;input&gt;, &lt;object&gt;, &lt;video&gt;
+                </td>
+                <td>
+                    <p>Especifica la altura de los elementos enumerados aquí. Para todos los demás elementos, usa la
+                        propiedad CSS height en su lugar.</p>
+
+                    <div>
+                        <p><strong>Nota:</strong> En algunos casos, como los &lt;div&gt;, este es un
+                            atributo
+                            de
+                            referencia, en donde debes usar la propiedad CSS height en su lugar.</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>hidden</td>
+                <td>Atributo Global</td>
+                <td>Evita la prestación del elemento dado, manteniendo los elementos secundarios, p.ej. los elementos de
+                    script</td>
+            </tr>
+            <tr>
+                <td>high</td>
+                <td>&lt;meter&gt; <small>(en-US)</small>
+                </td>
+                <td>Indica el menor valor del rango alto.</td>
+            </tr>
+            <tr>
+                <td>href</td>
+                <td>&lt;a&gt;, &lt;area&gt;, &lt;base&gt;, &lt;link&gt;</td>
+                <td>La URL de un recurso asociado.</td>
+            </tr>
+            <tr>
+                <td>hreflang</td>
+                <td>&lt;a&gt;, &lt;area&gt;, &lt;link&gt;</td>
+                <td>Especifica el lenguaje del recurso asociado.</td>
+            </tr>
+            <tr>
+                <td>http-equiv</td>
+                <td>&lt;meta&gt;</td>
+                <td>Indica una directiva que puede alterar el comportamiento de la pagina y como es leida por los
+                    exploradores.</td>
+            </tr>
+            <tr>
+                <td>icon</td>
+                <td>&lt;command&gt;
+                </td>
+                <td>
+                    <p>Especifica una imagen relacionada con el comando.</p>
+
+                    <div>
+                        <p><strong>Note:</strong> El elemento &lt;command&gt;
+                            es obsoleto y no se recomienda su uso.</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>id</td>
+                <td>Atributo Global</td>
+                <td>Identificador el elemento para acceder al mismo desde CSS o Javascript, este indicador debe ser
+                    unico
+                    para cada elemento.</td>
+            </tr>
+            <tr>
+                <td>ismap</td>
+                <td>&lt;img&gt;</td>
+                <td>Indica que la imagen es parte de un mapa de imagen del servidor.</td>
+            </tr>
+            <tr>
+                <td>itemprop</td>
+                <td>Atributo Global</td>
+                <td>Indica que el elemento contiene el valor de la propiedad especificada de un conjunto.</td>
+            </tr>
+            <tr>
+                <td>keytype</td>
+                <td>&lt;keygen&gt;</td>
+                <td>
+                    <p>Especifica el tipo de clave generada.</p>
+
+                    <div>
+                        <p><strong>Nota:</strong> RSA es el valor por defecto.</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>kind</td>
+                <td>&lt;track&gt;</td>
+                <td>Specifies the kind of text track.</td>
+            </tr>
+            <tr>
+                <td>label</td>
+                <td>&lt;track&gt;</td>
+                <td>Especifica el título de la pista con un formato legible por el usuario.</td>
+            </tr>
+            <tr>
+                <td>lang</td>
+                <td>Atributo Global</td>
+                <td>Define el lenguaje utilizado en el elemento.</td>
+            </tr>
+            <tr>
+                <td>language</td>
+                <td>&lt;script&gt; <small>(en-US)</small>
+                </td>
+                <td>Define el lenguage (de programación) utilizado en el elemento.</td>
+            </tr>
+            <tr>
+                <td>list</td>
+                <td>&lt;input&gt;</td>
+                <td>Identifica una serie de valores predefinidos para ser sugeridos al usuario.</td>
+            </tr>
+            <tr>
+                <td>loop</td>
+                <td>&lt;audio&gt;, &lt;bgsound&gt;, &lt;marquee&gt;,
+                    &lt;video&gt;
+                </td>
+                <td>Indica si el medio debe volver a ser reproducido desde el principio al llegar al final.</td>
+            </tr>
+            <tr>
+                <td>low</td>
+                <td>&lt;meter&gt; <small>(en-US)</small>
+                </td>
+                <td>Indica el valor mas alto del rango bajo.</td>
+            </tr>
+            <tr>
+                <td>manifest</td>
+                <td>&lt;html&gt;</td>
+                <td>Especifica la URL del manifiesto de cache para el documento.</td>
+            </tr>
+            <tr>
+                <td>max</td>
+                <td>&lt;input&gt;, &lt;meter&gt; <small>(en-US)</small>,
+                    &lt;progress&gt;
+                </td>
+                <td>Indica el máximo valor aceptado.</td>
+            </tr>
+            <tr>
+                <td>maxlength</td>
+                <td>&lt;input&gt;, &lt;textarea&gt;</td>
+                <td>Define el mayor número de caracteres aceptados.</td>
+            </tr>
+            <tr>
+                <td>media</td>
+                <td>&lt;a&gt;, &lt;area&gt;, &lt;link&gt;, &lt;source&gt;,
+                    &lt;style&gt;
+                </td>
+                <td>Da un indicio del tipo de medio para el cual el recurso vinculado fue creado.</td>
+            </tr>
+            <tr>
+                <td>method</td>
+                <td>&lt;form&gt;</td>
+                <td>Define el método HTTP a emplear para enviar el formulario. Puede ser
+                    GET (predeterminado) o POST.
+                </td>
+            </tr>
+            <tr>
+                <td>min</td>
+                <td>&lt;input&gt;, &lt;meter&gt; <small>(en-US)</small>
+                </td>
+                <td>Indica el valor mínimo aceptado.</td>
+            </tr>
+            <tr>
+                <td>multiple</td>
+                <td>&lt;input&gt;, &lt;select&gt;</td>
+                <td>Indica si múltiples valores pueden ser ingresados.</td>
+            </tr>
+            <tr>
+                <td>muted</td>
+                <td>&lt;video&gt;</td>
+                <td>Indica si el audio será silenciado inicialmente al cargar la página.</td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>&lt;button&gt;, &lt;form&gt;, &lt;fieldset&gt;,
+                    &lt;iframe&gt;, &lt;input&gt;, &lt;keygen&gt;,
+                    &lt;object&gt;, &lt;output&gt; <small>(en-US)</small>,
+                    &lt;select&gt;, &lt;textarea&gt;, &lt;map&gt;, &lt;meta&gt;,
+                    &lt;param&gt;
+                </td>
+                <td>Nombre del elemento. Por ejemplo utilizado por el servidor para identificar los campos en el envio
+                    de
+                    formularios.</td>
+            </tr>
+            <tr>
+                <td>novalidate</td>
+                <td>&lt;form&gt;</td>
+                <td>Este atributo indica que el formulario no debe ser validado cuando se envíe.</td>
+            </tr>
+            <tr>
+                <td>open</td>
+                <td>&lt;details&gt;</td>
+                <td>Indica si los detalles de la página seran mostrados cuando cargue la misma.</td>
+            </tr>
+            <tr>
+                <td>optimum</td>
+                <td>&lt;meter&gt; <small>(en-US)</small>
+                </td>
+                <td>Indica el valor numérico óptimo.</td>
+            </tr>
+            <tr>
+                <td>pattern</td>
+                <td>&lt;input&gt;</td>
+                <td>Define una expresion regular con la cual el valor del elemento debe ser validado.</td>
+            </tr>
+            <tr>
+                <td>ping</td>
+                <td>&lt;a&gt;, &lt;area&gt;</td>
+                <td>Indica si se enviara un ping o notificacion a la URL del recurso cuando el usuario utlize el
+                    vinculo.
+                </td>
+            </tr>
+            <tr>
+                <td>placeholder</td>
+                <td>&lt;input&gt;, &lt;textarea&gt;</td>
+                <td>Proporciona una sugerencia al usuario de lo que puede ser introducido en el campo.</td>
+            </tr>
+            <tr>
+                <td>poster</td>
+                <td>&lt;video&gt;</td>
+                <td>Una URL que indica un cuadro a mostrar hasta que el usuario reproduzca o navegue en el video.</td>
+            </tr>
+            <tr>
+                <td>preload</td>
+                <td>&lt;audio&gt;, &lt;video&gt;</td>
+                <td>Indica si el recurso o partes del mismo deben ser precargadas.</td>
+            </tr>
+            <tr>
+                <td>pubdate</td>
+                <td>&lt;time&gt;</td>
+                <td>Indica si esta fecha y tiempo concuerda con la fecha y tiempo del &lt;article&gt; mas
+                    cercano
+                    (ancestro).
+                </td>
+            </tr>
+            <tr>
+                <td>radiogroup</td>
+                <td>&lt;command&gt;
+                </td>
+                <td>
+                    <p>Indica los nombres de los comandos de tipo radio, que seran alternados si el comando en si es
+                        alternado. Este atributo debe ser omitido si el tipo de comando no es radio.</p>
+
+                    <div>
+                        <p><strong>Note:</strong> El elemento &lt;command&gt;
+                            es obsoleto y no se recomienda su uso.</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>readonly</td>
+                <td>&lt;input&gt;, &lt;textarea&gt;</td>
+                <td>Indica si el elemento puede ser editado por el usuario.</td>
+            </tr>
+            <tr>
+                <td>rel</td>
+                <td>&lt;a&gt;, &lt;area&gt;, &lt;link&gt;</td>
+                <td>Especifica la relación entre el objeto destino y el objeto enlace.</td>
+            </tr>
+            <tr>
+                <td>required</td>
+                <td>&lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;</td>
+                <td>Indica si se requiere rellenar o no este elemento.</td>
+            </tr>
+            <tr>
+                <td>reversed</td>
+                <td>&lt;ol&gt;</td>
+                <td>Indica si la lista debe ser mostrada en orden descendente en vez de ascendente.</td>
+            </tr>
+            <tr>
+                <td>rows</td>
+                <td>&lt;textarea&gt;</td>
+                <td>Define el número de filas en un área de texto.</td>
+            </tr>
+            <tr>
+                <td>rowspan</td>
+                <td>&lt;td&gt;, &lt;th&gt;</td>
+                <td>Define el número de filas que una celda de una tabla debe abarcar.</td>
+            </tr>
+            <tr>
+                <td>sandbox</td>
+                <td>&lt;iframe&gt;</td>
+                <td>Lista de restricciones a ser desactivadas en el iframe.</td>
+            </tr>
+            <tr>
+                <td>scope</td>
+                <td>&lt;th&gt;</td>
+                <td>Define las celdas que la cabecera definió en este elemento.</td>
+            </tr>
+            <tr>
+                <td>scoped</td>
+                <td>&lt;style&gt;</td>
+                <td>Indica si el estilo será aplicado sólo al elemento inmediato superior (padre). de no ser definido,
+                    el
+                    estilo se aplicara de forma global.</td>
+            </tr>
+            <tr>
+                <td>seamless</td>
+                <td>&lt;iframe&gt;</td>
+                <td>Indica si el iframe debe ser cargado como parte del mismo documento.</td>
+            </tr>
+            <tr>
+                <td>selected</td>
+                <td>&lt;option&gt;</td>
+                <td>Define un valor que será seleccionado al cargar la página.</td>
+            </tr>
+            <tr>
+                <td>shape</td>
+                <td>&lt;a&gt;, &lt;area&gt;</td>
+                <td>Define una región seleccionable para hacer hipervínculos asociados con una forma asociada a una
+                    figura
+                    para crear un mapa. Los valores para este atributo son: circle, defaul,
+                    plygon y rect.
+                </td>
+            </tr>
+            <tr>
+                <td>size</td>
+                <td>&lt;input&gt;, &lt;select&gt;</td>
+                <td>Define el ancho del elemento (en píxeles). Si el atributo del elemento es del tipo
+                    text o password entonces es el número de caracteres.
+                </td>
+            </tr>
+            <tr>
+                <td>sizes</td>
+                <td>&lt;link&gt;, &lt;img&gt;, &lt;source&gt;</td>
+                <td>Define los tamaños en los que el icono puede ser cargado.</td>
+            </tr>
+            <tr>
+                <td>span</td>
+                <td>&lt;col&gt;, &lt;colgroup&gt;</td>
+                <td>Indica el número de columnas que se agrupan.</td>
+            </tr>
+            <tr>
+                <td>spellcheck</td>
+                <td>Atributo Global</td>
+                <td>Indica si se permite la corrección ortográfica para el elemento.</td>
+            </tr>
+            <tr>
+                <td>src</td>
+                <td>&lt;audio&gt;, &lt;embed&gt;, &lt;iframe&gt;, &lt;img&gt;,
+                    &lt;input&gt;, &lt;script&gt; <small>(en-US)</small>,
+                    &lt;source&gt;, &lt;track&gt;, &lt;video&gt;
+                </td>
+                <td>La URL del contenido integrable.</td>
+            </tr>
+            <tr>
+                <td>srcdoc</td>
+                <td>&lt;iframe&gt;</td>
+                <td>Especifica el contenido de la página incluida.</td>
+            </tr>
+            <tr>
+                <td>srclang</td>
+                <td>&lt;track&gt;</td>
+                <td>Especifica el lenguaje del contenido de la pista.</td>
+            </tr>
+            <tr>
+                <td>srcset</td>
+                <td>&lt;img&gt;</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>start</td>
+                <td>&lt;ol&gt;</td>
+                <td>Define el número inicial de la lista (si es diferente a 1).</td>
+            </tr>
+            <tr>
+                <td>step</td>
+                <td>&lt;input&gt;</td>
+                <td>Indica el valor del incremento para un valor numerico o de fecha.</td>
+            </tr>
+            <tr>
+                <td>style</td>
+                <td>Atributo Global</td>
+                <td>Define los estilos CSS que anulan los estilos establecidos previamente.</td>
+            </tr>
+            <tr>
+                <td>summary</td>
+                <td>&lt;table&gt;</td>
+                <td>
+                    <p>Contiene una descripción del contenido de la tabla.</p>
+
+                    <p>Nota: Este atributo ha sido desaprovado, se recomienda incluir un elemento
+                        &lt;caption&gt; en la tabla.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>tabindex</td>
+                <td>Atributo Global</td>
+                <td>Sobrescribe el orden de tabulacion del navegador y usa el especificado.</td>
+            </tr>
+            <tr>
+                <td>target</td>
+                <td>&lt;a&gt;, &lt;area&gt;, &lt;base&gt;, &lt;form&gt;</td>
+                <td>
+                    <p>Especifica el marco destino en un vínculo.</p>
+
+                    <p>Valores especiales: "_blank" indica una nueva ventana, "_parent" indica el marco padre del marco
+                        que
+                        contiene el código fuente, "_self" indica el marco donde está el código fuente y "_top" indica
+                        la
+                        ventana completa del navegador.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>title</td>
+                <td>Atributo Global</td>
+                <td>Texto a ser mostrado cuando el cursor esté sobre el elemento.</td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td>&lt;button&gt;, &lt;input&gt;, &lt;command&gt;,
+                    &lt;embed&gt;, &lt;object&gt;, &lt;script&gt; <small>(en-US)</small>,
+                    &lt;source&gt;, &lt;style&gt;, &lt;menu&gt;</td>
+                <td>Define el tipo de elemento.</td>
+            </tr>
+            <tr>
+                <td>usemap</td>
+                <td>&lt;img&gt;, &lt;input&gt;, &lt;object&gt;</td>
+                <td>
+                    <p>Indica la URL parcial de un image map asociado con el elemento.</p>
+
+                    <div>
+                        <p><strong>Note:</strong> Este atributo no puede ser usado si el elemento
+                            &lt;img&gt; desciende de un &lt;button&gt; o
+                            &lt;a&gt;
+                        </p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>&lt;button&gt;, &lt;option&gt;, &lt;input&gt;, &lt;li&gt;,
+                    &lt;meter&gt; <small>(en-US)</small>,
+                    &lt;progress&gt;, &lt;param&gt;
+                </td>
+                <td>Define el valor predeterminado a ser mostrado al cargar la página.</td>
+            </tr>
+            <tr>
+                <td>width</td>
+                <td>&lt;canvas&gt;, &lt;embed&gt;, &lt;iframe&gt;, &lt;img&gt;,
+                    &lt;input&gt;, &lt;object&gt;, &lt;video&gt;
+                </td>
+                <td>
+                    <p>Para los elementos enumerados aquí, esto establece el ancho del elemento.</p>
+
+                    <div>
+                        <p><strong>Nota:</strong> En algunos casos, como los &lt;div&gt;, este es un
+                            atributo
+                            de
+                            referencia, en donde debes usar la propiedad CSS height en su lugar.</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>wrap</td>
+                <td>&lt;textarea&gt;</td>
+                <td>Indica la forma en la cual el texto debe ser envuelto.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
