@@ -6,20 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elementos semánticos, no semánticos y estilos</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        table{
+            width: 100%;
+        }
+        td{
+            padding-inline:1em;
+        }
+        th{
+            text-align: start;
+        }
+    </style>
 </head>
 <body>
-    <h1>Elementos semánticos</h1>
+    <h1>Elementos semánticos, no semánticos y elementos con formato</h1>
     <h2>
-        ¿Qué son los elementos semánticos?
+        Elementos semánticos:
     </h2>
     <p>Un elemento semántico describe claramente su significado tanto para el navegador como para el desarrollador.</p>
-    <p>Ejemplos de elementos no semánticos : &lt;div>y &lt;span>- No dice nada sobre su contenido.</p>
+   
     <p>Ejemplos de elementos semánticos : &lt;form>, &lt;table>y &lt;article>- Define claramente su contenido.</p>
     <p>Muchos sitios web contienen código HTML como: &lt;div id="nav"> &lt;div class="header"> &lt;div id="footer"> para indicar navegación, 
         encabezado y pie de página. Esto no debería suceder</p>
         <p>En HTML hay algunos elementos semánticos que se pueden usar para definir diferentes partes de una página web:  </p>
         <article>
-            <img src="img/elementosSemanticos.gif" alt="elementos semanticos" style="float: right; height: 100%;">
+            <img src="img/elementosSemanticos.gif" alt="elementos semanticos" >
             <ul>
                 <li>&lt;article&gt;</li> 
                 <li>&lt;aside&gt;</li> 
@@ -37,7 +48,83 @@
             </ul>
             
         </article>
+        <h2>Elementos no semánticos</h2>
+        <p>Ejemplos de elementos no semánticos : &lt;div>y &lt;span>- No dice nada sobre su contenido.</p>
+        <p>Div es un elemento en bloque cuyo significado no esta definido</p>
+        <p>Span es un elemento en línea cuyo significado no esta definido.</p>
+        <h2>Elementos con formato</h2>
+        <p>Son elementos cuya función principal es dar una presentación visual a su contenido, algunos de ellos está en desuso o como también se suele decir, son elementos 
+            de transición.</p>
+        <p>Algunos elementos se mezcla la función semántica con la de cierto formato.</p>
+        <table>
+            <tr>
+                <th>Elemento</th>
+                <th>Uso</th>
+                <th>Recomendación y uso semántico</th>
+            </tr>
+            <tr>
+                <td>&lt;b&gt;Texto &lt;b&gt;</td>
+                <td>Texto en negrita<br><b>Hola Mundo</b></td>
+                <td>&lt;strong&gt;Texto importante &lt;strong&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;i&gt;Texto &lt;i&gt;</td>
+                <td>Texto en cursiva: <br><i>Hola Mundo</i></td>
+                <td>&lt;em&gt;Énfasis en texto. &lt;em&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;mark&gt;Texto &lt;mark&gt;</td>
+                <td>Texto marcado: <br><mark>Texto Mundo</mark></td>
+                <td>Emplear estilos en su lugar, por ejemplo:
+                    <pre class="codigo">   
+                        mark {
+                            background-color: yellow;
+                            color: black;
+                        }</pre>
+                 </td>
+            </tr>
+            <tr>
+                <td>&lt;small&gt;Texto &lt;small&gt;</td>
+                <td>Texto pequeño, el significado semántico es indicar que el contenido es secundario o poco importante como puede ser 
+                    los derechos de autor o comentarios secundarios <br><small>Hola Mundo</small></td>
+                <td>Tiene un uso poco frecuente.</td>
+            </tr>
+            <tr>
+                <td>&lt;s&gt;Texto &lt;s&gt;</td>
+                <td>Texto eliminado, el significado semántico de este elemento es indicar que el contenido o información contenida en 
+                    este elemento esta en desuso, es incorrecta o ha sido eliminada. <br><del>Hola Mundo.</del></td>
+                <td>&lt;del&gt;Texto &lt;del&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;ins&gt;Texto &lt;ins&gt;</td>
+                <td>Texto subrayado, el significado semántico de esta etiqueta es el de insertar nuevo contenido en la página que substituye a uno antiguo &lt;del&gt;
+                    <br><ins>Hola Mundo</ins></td>
+                <td>Emplear estilos en su lugar. por ejemplo:
+                    <pre class="codigo">
+                        ins{
+                            text-decoration:underline;
+                        }</pre>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;sub&gt;Texto &lt;sub&gt;</td>
+                <td>Subíndice: <br> Hola <sub>Mundo</sub></td>
+                <td>Emplear estilos en su lugar</td>
+            </tr>
+            <tr>
+                <td>&lt;sup&gt;Texto &lt;sup&gt;</td>
+                <td>Superíndice: <br>Hola <sup>Mundo</sup></td>
+                <td>Emplear estilos en su lugar, por ejemplo:
+                    <pre class="codigo">
+                        sup {
+                            vertical-align: super;
+                            font-size: smaller;
+                          }</pre>
+                </td>
+            </tr>
+   
 
+        </table>
        
        
 
