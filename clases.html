@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Clases: "class"</h1>
+    <h2>Introducción</h2>
+    <p>class es un atributo que se utiliza en html para clasificar elementos en una página html</p>
+    <p>Múltiples elementos pueden compartir una misma clase.</p>
+    <p>El valor del atributo es sensible al uso de mayúsculas y minúsculas, no es igual class="negrita" que class="Negrita"</p>
+    <p>Un elemento html puede tener asignado varias clases separados por espacios</p>
+    <p>Además de su uso frecuente en css, también es muy frecuente en javascript</p>
+    <p>Sintaxis:</p>
+    <p class="codigo">
+        &lt;style&gt;            <br/>
+        &emsp;.negrita{            <br/>
+            &emsp;&emsp;  font-weight:bold;            <br/>
+            &emsp;}            <br/>
+            &emsp;.cursiva{            <br/>
+                &emsp;&emsp;font-style:italic;            <br/>
+                &emsp;}            <br/>
+        &lt;/style&gt;            <br/>
+        
+        &lt;p&gt;Lorem ipsum &lt;span class="negrita"&gt;dolor&lt;/span&gt; sit amet consectetur, adipisicing elit. Quo sapiente expedita, 
+            suscipit quibusdam atque est &lt;span class="negrita"&gt;porro&lt;/span&gt; voluptatibus optio aperiam enim illum consequuntur sint 
+            sit ratione iure similique nostrum quisquam ad tempore quidem harum &lt;span class="negrita cursiva"&gt;libero&lt;/span&gt; maiores voluptate molestiae. 
+            Quia culpa expedita, accusamus ab optio voluptatem vel perspiciatis soluta blanditiis, earum dignissimos!&lt;/p&gt;<br/>
+            &lt;script><br/>
+            &emsp;document.querySelector(".cursiva").style.color="red";<br/>
+            &lt;/script><br/>
+    </p>
+
+    <style>
+        .negrita{
+            font-weight: bold;
+        }
+        .cursiva{
+            font-style: italic;
+        }
+    </style>
+
+    <p>Lorem ipsum <span class="negrita">dolor</span> sit amet consectetur, adipisicing elit. Quo sapiente expedita, 
+        suscipit quibusdam atque est <span class="negrita">porro</span> voluptatibus optio aperiam enim illum consequuntur sint 
+        sit ratione iure similique nostrum quisquam ad tempore quidem harum <span class="negrita cursiva">libero</span> maiores voluptate molestiae. 
+        Quia culpa expedita, accusamus ab optio voluptatem vel perspiciatis soluta blanditiis, earum dignissimos!
+    </p>
+    <script>
+        document.querySelector(".cursiva").style.color="red";
+    </script>
+    
+</body>
+</html>

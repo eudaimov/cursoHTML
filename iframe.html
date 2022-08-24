@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #myiframe{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        #myiframe>iframe{
+            width: 80%;
+            height: 70vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iframes</h1>
+    <h2>Introducción</h2>
+    <p>Un iframe HTML se utiliza para mostrar una página web dentro de una página web.</p>
+    <p>Sugerencia: es una buena práctica incluir siempre un title atributo para el archivo &lt;iframe>.
+         Los lectores de pantalla lo utilizan para leer cuál es el contenido del iframe.</p>
+    <p>Sintaxis:</p>
+    <pre class="codigo">
+        &lt;iframe src="https://www.google.com/maps?output=embed"&gt;&lt;/iframe&gt;</pre>
+    <div id="myiframe">
+        <iframe src="https://maps.google.com/maps?q=Alcorc%C3%B3n&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <p>Hay páginas como google que no permiten embeber su páginas en otras</p>
+    <p>Para evitar que mi página se carge en otra</p>
+    try {
+        console.log('Estamos en iframe: ', window.self !== window.top);
+        console.log('Si nos lo permite CORS, podemos ver la URL:',
+          window.top.location);
+      } catch (e) {
+        /* Las políticas "same origin" impiden que accedamos a window.top */
+        console.log('Estamos en iframe');
+      }
+    
+    
+</body>
+</html>
