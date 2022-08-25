@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        table, th, td {
+            border-collapse: collapse;        
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+        td, th{
+            padding: 1em;
+        }
+      
+        .columns2plus3{
+                background-color: lightpink;
+            }
+        .centrado{
+            width: 100%;
+            display:flex;
+            justify-content: center;
+        }
+        caption{
+            margin-bottom: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tablas</h1>
+    <h2>Introducción</h2>
+    <p>Las tablas HTML permiten a los desarrolladores web organizar los datos en filas y columnas.</p>
+    <p>Una tabla en HTML consta de celdas de tabla dentro de filas y columnas</p>
+    <p>Para construir una tabla se deben utilizar múltiples elementos:</p>
+    <ul>
+        <li>Tabla: &lt;table&gt;</li>
+        <li>Encabezados de Tabla:</li>
+        <li>Cuerpo de la tabla</li>
+        <li>Pie de tabla</li>
+        <li>Filas</li>
+        <li>Celdas de encabezado</li>
+        <li>Celdas</li>
+        <li>Título de Tabla</li>
+        <li>Grupo de columnas</li>
+        <li>Propiedades de columna</li>
+    </ul>
+    <p>Antes de la creación de CSS, los elementos HTML &lt;table&gt; eran frecuentemente utilizados para la disposición 
+        (posicionamiento) de una página. Este uso ha sido desalentado desde HTML 4, y el elemento no debe ser usado para dichos fines.</p>
+
+    <p>Ejemplos de sintaxis:</p>
+    <pre class="codigo">
+        &lt;style&gt;
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 1em;
+            }
+        &lt;/style&gt;
+        &lt;table&gt;
+            &lt;thead&gt;
+              &lt;tr&gt;
+                &lt;th&gt;Header content 1&lt;/th&gt;
+                &lt;th&gt;Header content 2&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tfoot&gt;
+              &lt;tr&gt;
+                &lt;td&gt;Footer content 1&lt;/td&gt;
+                &lt;td&gt;Footer content 2&lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/tfoot&gt;
+            &lt;tbody&gt;
+              &lt;tr&gt;
+                &lt;td&gt;Body content 1&lt;/td&gt;
+                &lt;td&gt;Body content 2&lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+    </pre>
+
+
+    <section class="centrado">
+        <table>
+            <thead>
+              <tr>
+                <th>Header content 1</th>
+                <th>Header content 2</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <td>Footer content 1</td>
+                <td>Footer content 2</td>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <td>Body content 1</td>
+                <td>Body content 2</td>
+              </tr>
+            </tbody>
+          </table>
+
+    </section>
+
+
+  
+
+      <pre class="codigo">
+        &lt;style&gt;
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 1em;
+        }
+        .colums2plus3{
+            background-color:lightpink;
+        }
+
+    &lt;/style&gt;
+        &lt;table&gt;
+            &lt;colgroup&gt;
+                &lt;col&gt;
+                &lt;col class="columns2plus3" span="2"&gt;
+            &lt;/colgroup&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Lime&lt;/th&gt;
+                &lt;th&gt;Lemon&lt;/th&gt;
+                &lt;th&gt;Orange&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Green&lt;/td&gt;
+                &lt;td&gt;Yellow&lt;/td&gt;
+                &lt;td&gt;Orange&lt;/td>
+            &lt;/tr>
+        &lt;/table></pre>
+
+      <section class="centrado">
+        <table>
+            <colgroup>
+              <col class="column1">
+              <col class="columns2plus3" span="2">
+            </colgroup>
+            <tr>
+              <th>Lime</th>
+              <th>Lemon</th>
+              <th>Orange</th>
+            </tr>
+            <tr>
+              <td>Green</td>
+              <td>Yellow</td>
+              <td>Orange</td>
+            </tr>
+          </table>
+      </section>
+
+      <pre class="codigo">
+        &lt;style&gt;
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 1em;
+        }
+        caption{
+            margin-bottom:1em;
+        }
+         &lt;/style&gt;
+        &lt;table&gt;
+            &lt;caption&gt;Horario Semanal&lt;/caption&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Lunes&lt;/td&gt;
+                    &lt;td&gt;Martes&lt;/td&gt;
+                    &lt;td&gt;Miércoles&lt;/td&gt;
+                    &lt;td&gt;Jueves&lt;/td&gt;
+                    &lt;td&gt;Viernes&lt;/td&gt;
+                    &lt;td&gt;Sábado&lt;/td&gt;
+                    &lt;td&gt;Domingo&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Inglés&lt;/td&gt;
+                    &lt;td&gt;Matemáticas&lt;/td&gt;
+                    &lt;td&gt;Literatura&lt;/td&gt;
+                    &lt;td&gt;Física&lt;/td&gt;
+                    &lt;td&gt;Geografía&lt;/td&gt;
+                    &lt;td&gt;Historia&lt;/td&gt;
+                    &lt;td&gt;Filosofía&lt;/td&gt;
+                  &lt;/tr&gt;
+            &lt;/tbody&gt;
+       
+          &lt;/table&gt;
+      </pre>
+
+      <section class="centrado">
+        <table>
+            <caption>Horario Semanal</caption>
+            <thead>
+                <tr>
+                    <td>Lunes</td>
+                    <td>Martes</td>
+                    <td>Miércoles</td>
+                    <td>Jueves</td>
+                    <td>Viernes</td>
+                    <td>Sábado</td>
+                    <td>Domingo</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Inglés</td>
+                    <td>Matemáticas</td>
+                    <td>Literatura</td>
+                    <td>Física</td>
+                    <td>Geografía</td>
+                    <td>Historia</td>
+                    <td>Filosofía</td>
+                  </tr>
+            </tbody>
+       
+          </table>
+    </section>
+
+
+
+
+    <h2>Bordes</h2>
+    <p>Por defecto ninguna tabla tiene un borde definido</p>
+    <h3>¿Como añadir bordes?</h3>
+    <pre class="codigo">
+        table, th, td {
+            border: 1px solid black;
+          }
+    </pre>
+    <p>El resultado será el siguiente</p>
+    
+    <section class="centrado">
+    <table style="border-collapse: separate;">
+        <caption>Horario Semanal</caption>
+        <thead>
+            <tr>
+                <td>Lunes</td>
+                <td>Martes</td>
+                <td>Miércoles</td>
+                <td>Jueves</td>
+                <td>Viernes</td>
+                <td>Sábado</td>
+                <td>Domingo</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Inglés</td>
+                <td>Matemáticas</td>
+                <td>Literatura</td>
+                <td>Física</td>
+                <td>Geografía</td>
+                <td>Historia</td>
+                <td>Filosofía</td>
+              </tr>
+        </tbody>
+   
+      </table>
+      
+    </section>
+    <h3>¿Cómo colapsar los border?</h3>
+    <p>Para evitar que los border nos aparezcan dobles debemos marcar indicar las siguientes propiedades a través de css</p>
+    <pre class="codigo">
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+          }
+    </pre>
+    <h3>Otras propiedades de estilos que podemos determinar</h3>
+    <p>border-radius y border-color, border-style, background-color, tr:nth-child(even), tr:nth-child(odd), vertical-align</p>
+  
+    <h2>Tamaños</h2>
+    <section>
+        <p>Las tablas HTML pueden tener diferentes tamaños para cada columna, fila o la tabla completa.</p>
+        <p>Utilice el atributo style con las propiedades width o height para especificar el tamaño de una tabla, fila o columna.</p>
+        <p>Nota: Usar un porcentaje como unidad de tamaño para un ancho significa qué tan ancho será este elemento en comparación 
+            con su elemento principal, que en este caso es el &lt;body&gt; elemento.</p>
+
+        <h3>Ancho de columna</h3>
+        <p>Para establecer el tamaño de una columna específica, agregue el style atributo en un elemento &lt;th>o &lt;td>:</p>
+
+        <h3>Altura de la fila:</h3>
+        <p>Para establecer la altura de una fila específica, agregue el style atributo en un elemento de fila de la tabla:</p>
+    </section>
+    
+    <h2>Encabezados</h2>
+        <p>Las tablas HTML pueden tener encabezados para cada columna o fila, o para muchas columnas/filas.</p>
+        <p>Para usar la primera columna como encabezados de tabla, defina la primera celda de cada fila como un th elemento:</p>
+        <p>De forma predeterminada, los encabezados de las tablas están en negrita y centrados:</p>
+        <p>Para alinear a la izquierda los encabezados de la tabla, use la text-align propiedad CSS:</p>
+
+
+
+
+
+
+    <h2>Padding and Spacing</h2>
+        <p>Las tablas HTML pueden ajustar el relleno dentro de las celdas y también el espacio entre las celdas.</p>
+        <h3>Relleno de celda:</h3>
+        <p>El relleno de celda es el espacio entre los bordes de la celda y el contenido de la celda.</p>
+        <p>De forma predeterminada, el relleno se establece en 0.</p>
+        <p>>Para agregar relleno en las celdas de la tabla, use la propiedad CSS padding</p>
+        <h3>Espacio entre celdas:</h3>
+        <p>El espacio entre celdas es el espacio entre cada celda.</p>
+        <p>De forma predeterminada, el espacio se establece en 2 píxeles.</p>
+        <p>Para cambiar el espacio entre las celdas de la tabla, use la border-spacing propiedad CSS en el table elemento:</p>
+
+
+    <h2>Colspan y Rowspan</h2>
+    <p>Las tablas HTML pueden tener celdas que ocupan varias filas y/o columnas.</p>
+    <p>Para hacer que una celda abarque varias columnas, use el atributo colspan</p>
+    <p>El valor del atributo colspan representa el número de columnas que abarca.</p>
+
+    <p>Para hacer que una celda abarque varias filas, use el atributo:rowspan</p>
+    <p>El valor del atributo rowspan representa el número de filas que abarca.</p>
+
+
+
+
+    <h2>Estilo</h2>
+    <h3>Rayas de Cebra</h3>
+    <h3>Rayas de Cebra vertical</h3>
+    <h3>Combinar rayas de cebra horizontales con verticales</h3>
+    <h3>Divisores horizontales</h3>
+    <h3>Resaltar filas al pasar el raton</h3>
+
+
+    <h2>Agrupación por Columnas</h2>
+    <p>Si desea aplicar estilo a las dos primeras columnas de una tabla, utilice los elementos &lt;colgroup&gt; y &lt;col&gt; .</p>
+</body>
+</html>

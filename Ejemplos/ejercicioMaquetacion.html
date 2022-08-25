@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        header{
+            height: 5vh;
+            background-color: lightcoral;
+        }
+        nav{
+            height:5vh;
+            background-color: lightskyblue;
+        }
+        header, nav, footer{
+            text-align: center;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        #contenidoPrincipal{
+            height: 80vh;
+            width: 100vw;
+            background-color: lightcyan;
+            display: flex;
+        }
+        #columna{
+            background-color: greenyellow;
+            width: 70vw;
+        }
+        section, article{ 
+            display: flex;
+            padding-left: 1em;
+            align-items: center;
+            height: 50%;
+        }
+        aside{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: darkcyan;
+            width: 30vw;
+
+        }
+        footer{
+            color:white;
+            height: 10vh;
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <header>Titulo de página(header)</header>
+    <nav>Menú de Navegación(Nav)</nav>
+    <div id="contenidoPrincipal">
+
+        <aside>
+            Contenido lateral (aside)
+        </aside>
+        <div id="columna">
+            <section>Seccion I</section>
+            <article>Articulo 1</article>
+        </div>
+    </div>
+    <footer>
+        footer
+    </footer>
+
+
+</body>
+</html>
