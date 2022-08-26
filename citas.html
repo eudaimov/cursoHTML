@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citas, abreviaturas,direcciones, títulos de obras y dirección del texto</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Citas, abreviaturas,direcciones, títulos de obras y dirección del texto.</h1>
+    <p>En este apartado hablaremos de como crear contenido en se realicen citas, abreviaturas, direcciones, títulos de obras y dirección del texto</p>
+    
+    
+    
+    
+    <h2>Citas normales:&lt;blockquote&gt;</h2>
+    <p>El elemento HTML blockquote define una sección que se cita de otra fuente.</p>
+    
+    
+    <p>Ejemplo:</p>
+
+    <p><blockquote cite="http://www.worldwildlife.org/who/index.html">
+        For nearly 60 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by more than one million members in the United States and close to five million globally.
+        </blockquote></p>
+    <p class="codigo">&lt;blockquote cite="http://www.worldwildlife.org/who/index.html"&gt;
+        For nearly 60 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by more than one million members in the United States and close to five million globally.
+        &lt;/blockquote&gt;</p>
+
+    <h2>Citas Cortas:&lt;q&gt;</h2>
+        <p>La &lt;q&gt;etiqueta HTML define una cita corta.</p>
+        <p>Los navegadores normalmente insertan comillas alrededor de la cita.</p>
+        <p>Ejemplo:</p>
+        <p> Según dijo Miguel de Cervantes,<q>más vale la pena en el rostro que la mancha en el corazón</q></p> 
+        <p class="codigo">Según dijo Miguel de Cervantes, &lt;q>más vale la pena en el rostro que la mancha en el corazón&lt;/q></p>
+
+
+
+
+    <h2>Abreviaturas:</h2>
+    <p>Este elemento sirve para definir una abreviatura o un acrónimo, como "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM".</p>
+    <p>Marcar abreviaturas puede brindar información útil a los navegadores, sistemas de traducción y motores de búsqueda.</p>
+    <p>Sugerencia: use el atributo de título global para mostrar la descripción de la abreviatura/acrónimo cuando pase el mouse sobre el elemento.</p>
+        <p>Ejemplo:</p>
+        <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+        <pre class="codigo">
+            &lt;p/&gt;The &lt;abbr title="World Health Organization">WHO&lt;/abbr> was founded in 1948.&lt;/p>
+        </pre>
+
+    <h2>Dirección:&lt;address&gt;</h2>
+    <p>La &lt;address>etiqueta HTML define la información de contacto del autor/propietario de un documento o artículo.</p>
+    <p>La información de contacto puede ser una dirección de correo electrónico, 
+        URL, dirección física, número de teléfono, identificador de redes sociales, etc.</p>
+    <p>El texto del elemento address generalmente se presenta en cursiva y los navegadores siempre agregarán un salto de línea antes y después de
+            dicho elemento.</p>
+    
+
+    <h2>Títulos de obras o trabajos: &lt;cite&gt;</h2>
+    <p>La &lt;cite>etiqueta HTML define el título de un trabajo creativo (por ejemplo, un libro,
+         un poema, una canción, una película, una pintura, una escultura, etc.).</p>
+         <p>Nota: El nombre de una persona no es el título de una obra.El texto del <cite>elemento normalmente se muestra en cursiva .</p>
+
+
+
+
+
+
+
+
+    <h2>Dirección del texto:&lt;bdo&gt;</h2>
+   <p>BDO significa anulación bidireccional.</p> 
+   <p>La &lt;bdo>etiqueta HTML se utiliza para anular la dirección del texto actual.</p>
+
+    
+</body>
+</html>
