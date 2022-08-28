@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Colores HTML</h1>
+    <h2>Introducción</h2>
+    <p>Los colores HTML se especifican con nombres de colores predefinidos o con valores RGB, HEX, HSL, RGBA o HSLA.</p>
+    <h2>Nombres de colores estándares:</h2>
+    <p>En HTML, un color se puede especificar usando un nombre de color:</p>
+    <div class="colores">
+        <div class="color" style="background-color: black; color:white">black</div>
+        <div class="color" style="background-color: white;">white</div>
+        <div class="color" style="background-color: red;">red</div>
+        <div class="color" style="background-color: tomato;">tomato</div>
+        <div class="color" style="background-color: orange;">orange</div>
+        <div class="color" style="background-color: yellow;">yellow</div>
+        <div class="color" style="background-color: green;">green</div>
+        <div class="color" style="background-color: greenyellow;">greenyellow</div>
+        <div class="color" style="background-color: mediumseagreen;">mediumseagreen</div>
+        <div class="color" style="background-color: brown;">brown</div>
+        <div class="color" style="background-color: violet;">violet</div>
+        <div class="color" style="background-color: purple;">purple</div>
+        <div class="color" style="background-color: blue;">blue</div>
+        <div class="color" style="background-color: slateblue;">slateblue</div>
+        <div class="color" style="background-color: dodgerblue;">dodgerblue</div>
+        <div class="color" style="background-color: gray;">gray</div>
+    </div>
+    <p>HTML supports 140 standard color names.</p>
+    <h2>Lugares mas comunes dónde poner colores</h2>
+    <ul>
+        <li>background-colo: Color de fondo</li>
+        <li>color: color del texto</li>
+        <li>border, outline, shadow: Borde externo, borde interno, sombras</li>
+    </ul>
+    <h2>RGB y RGBA</h2>
+    <p>Un valor de color RGB representa las fuentes de luz ROJA, VERDE y AZUL. y si se le añade una A, sería un canal Alfa de transparencia</p>
+    <p>Ejemplo</p>
+    <p class="codigo">background-color:rgb(255,0,0); //Corresponde al color rojo</p>
+    <p>Los valores van del 0 al 255 excepto el canal alfa que va del 0.0 al 1.0</p>
+    
+
+    <h2>Colores Hexadecimales</h2>
+    <p>Comienza siempre con el símbolo de almohadilla <sup>1</sup>, y luego puede continuar con seis caracteres que pueden ser del 0 al 9 y continua por la A y termina en la F, lo que da un total de 16 números</p>
+    <p class="codigo">0123456789ABCDF</p>
+    <p>Por ejemplo:</p>
+    <p class="codigo">background-color:#FF0000; (Color rojo)</p>
+    <p>Para comprender o intuir el resultado final del color debemos dividir el los seis caracteres en grupos de 2, los dos primeros caracteres corresponden al Rojo,
+         los dos siguientes al Verde y los dos últimos al azul. por lo que podemos elegir entre 256 colores de rojo , 256 colores de verde, etc.
+    </p>
+    <p>Por que 256 colores porque es el resultado de multiplicar 16x16</p>
+    <div class="colores" style="margin-bottom: 1em;">
+        <div class="color" style="background-color:#f00"></div>
+    </div>
+    <p>El color hexadecimal se puede reducir a un valor de tres caracteres que al igual que el de 6 caracteres sus valores pueden ir del 0 al F, 
+        el segundo valor de cada grupo se sobreentiende que es un 0.</p>
+    <p>#f00 es igual a #f00000</p>
+
+    <h2>Colores HTML HSL y HSLA</h2>
+    <p>HSL significa tono, saturación y luminosidad.</p>
+    <p> Los valores de color HSLA son una extensión de HSL con un canal alfa (opacidad).</p>
+    <p>El tono va de 0 al 360, la saturación del 0 al 100 y la luminosidad del 0 al 100, el canal alfa del 0.0 al 1.0</p>
+           
+    <hr>
+
+    <footer style="font-size:10pt;">
+        <p><sup>1</sup>La almohadilla​ (en España)​ o el numeral​ (en América) es el símbolo #, consistente en dos segmentos de recta similares, 
+            paralelos y casi verticales, cruzados por otros dos que son más cortos, similares, paralelos y horizontales. Por usarse en algunos países 
+            y ámbitos para indicar cifras, también se llama signo de número y cardinal. Además, por su parecido al tablero del juego tres en línea, 
+            también se llama michi, tatetí, tresenlínea, gato y vieja.</p>
+        <p> La almohadilla o numeral se asemeja al símbolo musical de sostenido, al que sustituye a veces (especialmente en escritura mecánica, 
+            cuando la fuente elegida no posee el signo musical).<cite>Wikipedia</cite></p>
+    </footer>
+</body>
+</html>

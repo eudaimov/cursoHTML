@@ -34,3 +34,19 @@ li{
 h1,h2,h3,h4,h5,h6{
     margin-block: 1em;
 }
+.colores{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:1em
+}
+.color{
+    width: 20%;
+    height: 20vh;
+    border: 1px black solid;
+    font-size: xx-large;
+    justify-content: center;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
