@@ -11,14 +11,30 @@
     <h1>Formularios</h1>
     <h2>Para qué sirven</h2>
     <p>Un formulario es utilizado en la mayoría de las páginas web para recoger diverso tipo de información y enviarla a un servidor.</p>
-    <h2>Composión o estructura:</h2>
-    <p>El elemento raiz de un formaulario esta formado por el elemento &lt;form&gt; &lt;/form&gt;</p>
-    <p>Dentro de este elemento y de manera anidada se encuentran los elementos &lt;input/&gt;, los cuales existen de muy diversos, estos elementos 
-        también son conocidos como campos de entrada de los formularios </p>
-    <p>Delante de cada elemento <em>input</em> suele ir antecedido por el elemento &lt;label&gt; &lt;label&gt;, aunque no siempre es así. </p>
+    
+    <h2>Composición o estructura:</h2>
+    <p>El elemento raíz de un formulario esta formado por el elemento &lt;form&gt; &lt;/form&gt;</p>
+    <p>Dentro de este elemento y de manera anidada se encuentran  diferentes tipos de  elementos como:</p>
+    <ul>
+        <li>label</li>
+        <li>input</li>
+        <li>text area</li>
+        <li>select</li>
+        <ul style="margin-left:2em;">
+            <li>option</li>
+        </ul>
+        <li>datalist</li>
+        <ul style="margin-left:2em;"><li>option</li></ul>
+        <li>output</li>
+       
+        <li>fieldset</li>
+        <ul><li>legend</li></ul>
+    </ul>
+
+
     <h2>Label</h2>
     <p>Este elemento nos sirve para identificar
-        el contenido que va ir dentro de su correspondiente entrada, para relacionar el elemento label con su input correspondiente se utiliza 
+        el contenido que va ir dentro de su correspondiente campo de entrada, para relacionar el elemento label con su input correspondiente se utiliza 
         el atributo for.
     </p>
     <p>
@@ -42,7 +58,14 @@
             <input type="text" id="lname" name="lname">
         </form>
     </div>
-    <h2>Tipos de entradas</h2>
+    
+    <h2>Input</h2>
+    <p>Son elementos mas usados y existen de muy diversos tipos.</p>
+    <p>Son conocidos como campos de entrada de los formularios. </p>
+    <p>Delante de cada elemento <em>input</em> suele ir antecedido por el elemento &lt;label&gt; &lt;label&gt;, aunque no siempre es así. </p>
+   
+
+    <h2>Tipos de campos de entrada:</h2>
     <p>Como hemos dicho antes existen diferentes tipos de entrada, para indicar estos tipos de entrada se utiliza 
         el atributo type.
     </p>
@@ -73,6 +96,110 @@
     </ul>
 
     <h2>Atributos del elemento Form</h2>
+    <section>
+        <p>En esta sección se describen los atributos que pueden encontrarse dentro del elemento form.</p>
+        <h3>Atributo action:</h3>
+            <p>Este atributo nos dice hacia dónde se dirigen los datos, por regla general es a un endpoint que se encuentra detras del servidor, sino se 
+                nada, se supone que se envía a la misma página.</p>
+            <p></p>
+        <h3>Atributo target:</h3>
+                <p>Este atributo nos dice dónde se cargara la respuesta, los diferentes valores por los que se puede optar son:</p>
+                <ul>
+                    <li>_blank La respuesta se muestra en una pestaña o ventana diferente.</li>
+                    <li>_self La respuesta se muestra en la misma pestaña o ventana.</li>
+                    <li>_parent La respuesta se muestra en frame padre.</li>
+                    <li>_top La respuesta se recibe en el cuerpo de la ventana.</li>
+                    <li>frameName La respuesta se muestra en el iframe de dicho nombre.</li>
+                </ul>
+        <h3>Atributo method:</h3>
+            <p>Define la manera en que se van a enviar los datos al servidor.</p> 
+            <p>Esta acción se realiza automáticamente  a través del input o entrada de campo de tipo submit.</p>
+            <p>Los métodos mas conocidos son Get and Post</p>
+            <p>Get es el valor por defecto.</p>
+            <h4>Método get:</h4>
+            <p>Agrega los datos del formulario a la URL, en pares de nombre/valor</p>
+            <p>¡NUNCA use GET para enviar datos confidenciales! (¡Los datos del formulario enviado son visibles en la URL!)</p>
+            <p>La longitud de una URL es limitada (2048 caracteres)</p>
+            <p>Útil para envíos de formularios en los que un usuario desea marcar el resultado</p>
+            <p> GET es bueno para datos no seguros, como cadenas de consulta en Google</p>
+            <h4>Método Post</h4>
+            <p>Agrega los datos del formulario dentro del cuerpo de la solicitud HTTP (los datos del formulario enviado no se muestran en la URL)</p>
+            <p>POST no tiene limitaciones de tamaño y se puede utilizar para enviar grandes cantidades de datos.</p>
+            <p>Los envíos de formularios con POST no se pueden marcar</p>
+            <p> ¡siempre use POST si los datos del formulario contienen información confidencial o personal!</p>
+        <h3>Atributo autocomplete</h3>
+                <p>El autocompleteatributo especifica si un formulario debe tener activado o desactivado el autocompletado.</p>
+                <p>Cuando la función de autocompletar está activada, el navegador completa 
+                    automáticamente los valores en función de los valores que el usuario ha ingresado anteriormente.</p>
+
+        <h3>Atributo Novalidate</h3>
+                <p>Cuando está presente, especifica que los datos del formulario (entrada) no deben validarse cuando se envían.</p>
+        <h3>Atributo accept-charset</h3>
+            <p>El accept-charset especifica las codificaciones de caracteres que se utilizarán para el envío del formulario.</p>
+        <h3>Atributo enctype</h3>
+                    <p>El enctype atributo especifica cómo se deben codificar los datos del formulario al enviarlos al servidor.</p>
+                    <p>Sólo se usa cuando se envía por el método post</p>
+                    <p>application/x-www-form-urlencoded Predeterminado. Todos los caracteres se codifican
+                         antes de enviarse (los espacios se convierten en símbolos "+" y los caracteres especiales se convierten en valores ASCII HEX)
+                        multipart/form-data  Este valor es necesario si el usuario cargará un archivo a través del formulario 
+                        text/plain Envía datos sin ningún tipo de codificación. No recomendado</p>
+        <h3>Atributo rel</h3>
+                        <p>El relatributo especifica la relación entre el documento actual y el documento vinculado.</p>
+                        <p>Los valores posibles son:</p>
+                         <table>
+                            <thead><tr><td> Valor</td><td>Descripción</td></tr></thead>
+                            <tbody>
+                                <tr>
+                                    <td>External</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>help</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>license</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>next</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>nofollow</td>
+                                    <td>Enlaces a un documento no respaldado, como un enlace pagado. 
+                                        ("nofollow" es utilizado por Google para especificar que la araña de búsqueda de Google no debe seguir ese enlace)</td>
+                                </tr>
+                                <tr>
+                                    <td>noopener</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>noreferrer</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>opener</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>prev</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>search</td>
+                                    <td></td>
+                                </tr>
+
+                            </tbody>
+                         </table>
+                
+                
+               
+    </section>
+    <h2>Input</h2>
+        <h3>Tipos de campos de entrada:</h3>
+        <h3>Atributos input</h3>
     <h2>Otros elementos de entrada para formularios:</h2>
     <h3>ComboBox: Select, option </h3>
     <h3>textArea</h3>
