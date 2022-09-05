@@ -32,68 +32,6 @@
     </ul>
 
 
-    <h2>Label</h2>
-    <p>Este elemento nos sirve para identificar
-        el contenido que va ir dentro de su correspondiente campo de entrada, para relacionar el elemento label con su input correspondiente se utiliza 
-        el atributo for.
-    </p>
-    <p>
-        Como valor del atributo for se escribir el mismo que hemos dado en el atributo name del elemento input.
-        Como contenido, escribiremos una palabra o palabras que nos expliquen lo que estamos introduciendo en nuestro input.       
-    </p>
-    <p>Ejemplo:</p>
-    <pre class="codigo">
-        &lt;form&gt;
-            &lt;label for="fname"&gt;Nombre:&lt;/label&gt;&lt;br&gt;
-            &lt;input type="text" id="fname" name="fname"&gt;
-            &lt;br&gt;
-            &lt;label for="lname"&gt;Apellidos:&lt;/label&gt;&lt;br&gt;
-            &lt;input type="text" id="lname" name="lname"&gt;
-        &lt;/form&gt;</pre>
-    <div class="codigo">
-        <form>
-            <label for="fname">Nombre:</label><br>
-            <input type="text" id="fname" name="fname"><br>
-            <label for="lname">Apellidos:</label><br>
-            <input type="text" id="lname" name="lname">
-        </form>
-    </div>
-    
-    <h2>Input</h2>
-    <p>Son elementos mas usados y existen de muy diversos tipos.</p>
-    <p>Son conocidos como campos de entrada de los formularios. </p>
-    <p>Delante de cada elemento <em>input</em> suele ir antecedido por el elemento &lt;label&gt; &lt;label&gt;, aunque no siempre es así. </p>
-   
-
-    <h2>Tipos de campos de entrada:</h2>
-    <p>Como hemos dicho antes existen diferentes tipos de entrada, para indicar estos tipos de entrada se utiliza 
-        el atributo type.
-    </p>
-    <p>Los diferentes tipos de entrada son:</p>
-    <ul>
-        <li>text</li>
-        <li>radio</li>
-        <li>checkbox</li>
-        <li>submit</li>
-        <li>button</li>
-        <li>date</li>
-        <li>color</li>
-        <li>datetime-local</li>
-        <li>email</li>
-        <li>file</li>
-        <li>hidden</li>
-        <li>image</li>
-        <li>month</li>
-        <li>password</li>
-        <li>range</li>
-        <li>reset</li>
-        <li>search</li>
-        <li>tel</li>
-        <li>time</li>
-        <li>url</li>
-        <li>week</li>
-        
-    </ul>
 
     <h2>Atributos del elemento Form</h2>
     <section>
@@ -144,7 +82,7 @@
                         multipart/form-data  Este valor es necesario si el usuario cargará un archivo a través del formulario 
                         text/plain Envía datos sin ningún tipo de codificación. No recomendado</p>
         <h3>Atributo rel</h3>
-                        <p>El relatributo especifica la relación entre el documento actual y el documento vinculado.</p>
+                        <p>El atributo rel especifica la relación entre el documento actual y el documento vinculado.</p>
                         <p>Los valores posibles son:</p>
                          <table>
                             <thead><tr><td> Valor</td><td>Descripción</td></tr></thead>
@@ -197,9 +135,109 @@
                 
                
     </section>
+
+    <h2>Label</h2>
+    <p>Este elemento nos sirve para identificar el contenido que va ir dentro de su correspondiente campo de entrada, 
+        para relacionar el elemento label con su input correspondiente se utiliza 
+        el atributo for.
+    </p>
+    <p>
+        Como valor del atributo for se escribir el mismo que hemos dado en el atributo id del elemento input.
+        Como contenido, escribiremos una palabra o palabras que nos expliquen lo que estamos introduciendo en nuestro input.       
+    </p>
+    <p>Ejemplo:</p>
+    <pre class="codigo">
+        &lt;form&gt;
+            &lt;label for="fname"&gt;Nombre:&lt;/label&gt;&lt;br&gt;
+            &lt;input type="text" id="fname" name="fname"&gt;
+            &lt;br&gt;
+            &lt;label for="lname"&gt;Apellidos:&lt;/label&gt;&lt;br&gt;
+            &lt;input type="text" id="lname" name="lname"&gt;
+        &lt;/form&gt;</pre>
+    <div class="codigo">
+        <form>
+            <label for="fname">Nombre:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Apellidos:</label><br>
+            <input type="text" id="lname" name="lname">
+        </form>
+    </div>
+    
     <h2>Input</h2>
-        <h3>Tipos de campos de entrada:</h3>
-        <h3>Atributos input</h3>
+    <p>Son elementos mas usados y existen de muy diversos tipos. Son conocidos como campos de entrada de los formularios. 
+        Delante de cada elemento <em>input</em> suele ir antecedido por el elemento &lt;label&gt; &lt;label&gt;, aunque no siempre es así. </p>
+   
+
+    <h3>Tipos de campos de entrada:</h2>
+    <p>Como hemos dicho antes existen diferentes tipos de entrada, para indicar estos tipos de entrada se utiliza 
+        el atributo type.
+    </p>
+    <p>Los diferentes tipos de entrada son:</p>
+    <ul>
+        <li>text: Es el más común de los input, y de define una linea de texto de entrada</li>
+            <p class="codigo">&lt;label for="nombre">Nombre&lt/label&gt; &lt;input type="text" name="nombre"&gt;&lt;/input&gt;</p>
+            <p class="codigo"><label for="nombre">Nombre:&emsp;</label><input type="text" name="nombre"></input></p>
+        <li>radio: Permite seleccionar una única acción. El atributo name debe de ser igual entre aquellas opciones que se deben elegir. Por ejemplo:</li>
+            <pre class="codigo">
+                Selecciona un lenguaje:&lt;br&gt;
+                &lt;input type="radio" id="html" name="lenguaje"&gt;&lt;label for="html"&gt;&emsp;HTML &lt;/label&gt; &lt;br&gt;
+                &lt;input type="radio" id="css" name="lenguaje"&gt;&lt;label for="css"&gt;&emsp;CSS &lt;/label&gt; &lt;br&gt;
+                &lt;input type="radio" id="javascript" name="lenguaje"&gt;&lt;label for="javascript"&gt;&emsp;JavaScript &lt;/label&gt; &lt;br&gt;
+            </pre>
+            <p class="codigo">
+                Selecciona un lenguaje:<br>
+                <input type="radio" id="html" name="lenguaje"><label for="html">&emsp;HTML</label><br>
+                <input type="radio" id="css" name="lenguaje"><label for="css">&emsp;CSS</label><br>
+                <input type="radio" id="javascript" name="lenguaje"><label for="javascript">&emsp;JavaScript</label><br>
+
+            </p>
+
+
+        <li>checkbox</li>
+
+        <li>submit: Define un botón que envía los datos de un formulario al servidor según el atributo action del formulario.</li>
+        <pre class="codigo">
+            &lt;form action="/example_action.php"&gt;
+                &lt;label for="nombre"&gt;Nombre:&emsp;&lt;/label&gt;
+                &lt;input type="text" id="nombre" name="nombre" value="Félix"&gt;&lt;br&gt;
+                &lt;input type="submit" value="Enviar datos"&gt;
+              &lt;/form&gt; </pre>
+        <div class="codigo">
+            <form action="/example_action.php">
+                <label for="nombre">Nombre:&emsp;</label>
+                <input type="text" id="nombre" name="nombre" value="Félix"><br>
+                <input type="submit" value="  Enviar datos  ">
+              </form>
+            </div>
+
+        <li>button</li>
+        <li>date</li>
+        <li>color</li>
+        <li>datetime-local</li>
+        <li>email</li>
+        <li>file</li>
+        <li>hidden</li>
+        <li>image</li>
+        <li>month</li>
+        <li>password: Define un campo de tipo contraseña. Los caracteres introducidos serán ocultos tras unos asterisco o puntos.</li>
+        <p class="codigo">&lt;label for="pass">Contraseña&lt;/label>&lt;input type="password" name="pass"></p>
+        <p class="codigo"><label for="pass">Contraseña:&emsp;</label><input type="password" name="pass"></p>
+        <li>range</li>
+        <li>reset</li>
+        <li>search</li>
+        <li>tel</li>
+        <li>time</li>
+        <li>url</li>
+        <li>week</li>
+        
+    </ul>
+        
+    
+    <h3>Atributos input</h3>
+  
+  
+  
+  
     <h2>Otros elementos de entrada para formularios:</h2>
     <h3>ComboBox: Select, option </h3>
     <h3>textArea</h3>
