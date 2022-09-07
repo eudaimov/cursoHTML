@@ -179,21 +179,31 @@
             <p class="codigo"><label for="nombre">Nombre:&emsp;</label><input type="text" name="nombre"></input></p>
         <li>radio: Permite seleccionar una única acción. El atributo name debe de ser igual entre aquellas opciones que se deben elegir. Por ejemplo:</li>
             <pre class="codigo">
-                Selecciona un lenguaje:&lt;br&gt;
-                &lt;input type="radio" id="html" name="lenguaje"&gt;&lt;label for="html"&gt;&emsp;HTML &lt;/label&gt; &lt;br&gt;
-                &lt;input type="radio" id="css" name="lenguaje"&gt;&lt;label for="css"&gt;&emsp;CSS &lt;/label&gt; &lt;br&gt;
-                &lt;input type="radio" id="javascript" name="lenguaje"&gt;&lt;label for="javascript"&gt;&emsp;JavaScript &lt;/label&gt; &lt;br&gt;
-            </pre>
-            <p class="codigo">
-                Selecciona un lenguaje:<br>
-                <input type="radio" id="html" name="lenguaje"><label for="html">&emsp;HTML</label><br>
-                <input type="radio" id="css" name="lenguaje"><label for="css">&emsp;CSS</label><br>
-                <input type="radio" id="javascript" name="lenguaje"><label for="javascript">&emsp;JavaScript</label><br>
+    &lt;p&gt;Selecciona un lenguaje:&lt;p&gt;
+    &lt;input type="radio" id="html" name="lenguaje"&gt;&lt;label for="html"&gt;&emsp;HTML &lt;/label&gt; &lt;br&gt;
+    &lt;input type="radio" id="css" name="lenguaje"&gt;&lt;label for="css"&gt;&emsp;CSS &lt;/label&gt; &lt;br&gt;
+    &lt;input type="radio" id="javascript" name="lenguaje"&gt;&lt;label for="javascript"&gt;&emsp;JavaScript &lt;/label&gt; &lt;br&gt;</pre>
+            <div class="codigo">
+                <p>Selecciona un lenguaje:</p>
+                <p>
+                    <input type="radio" id="html" name="lenguaje"><label for="html">&emsp;HTML</label><br>
+                    <input type="radio" id="css" name="lenguaje"><label for="css">&emsp;CSS</label><br>
+                    <input type="radio" id="javascript" name="lenguaje"><label for="javascript">&emsp;JavaScript</label><br>
+                </p>
+            </div>
 
-            </p>
 
-
-        <li>checkbox</li>
+        <li>checkbox: Se utiliza como casilla de verificación, permite seleccionar ninguna o varias opciones de un número limitado.</li>
+        <p>Ejemplo:</p>
+        <div class="codigo">
+            <p>Elije los vehículos que poseas:</p>
+            <form action="">
+                <input type="checkbox" name="transporte" id="coche" value="Coche"><label for="coche">Coche</label><br>
+                <input type="checkbox" name="transporte" id="bicicleta" value="Bicicleta"><label for="bicicleta">Bicicleta</label><br>
+                <input type="checkbox" name="transporte" id="moto" value="Moto"><label for="moto">Moto</label><br>
+                <input type="checkbox" name="transporte" id="patinete" value="Patinete"><label for="patinete">Patinete</label><br>
+            </form>
+        </div>
 
         <li>submit: Define un botón que envía los datos de un formulario al servidor según el atributo action del formulario.</li>
         <pre class="codigo">

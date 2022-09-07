@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elemento Arrastrable</title>
+    <style>
+        *{
+            padding: 0;
+            margin:0;
+            outline-color: transparent;
+            outline: none;
+        }
+        #element{
+            position:absolute;
+            width: 50vw;
+            height: 50vh;
+            background-color: black;
+            color:white;
+            left: 100px;
+            display: flex;
+            flex-direction: column;
+        }
+        #titleChat{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            background-color: dodgerblue;
+            height: 2em;
+        }
+        #titleChat:hover{
+            cursor:move;
+        }
+        #contenidoChat{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+    </style>
+    <script>
+
+        var posicionInicialX;
+        var posicionInicialY;
+        function arrastrar(event){
+            posicionInicialX = event.clientX;
+            posicionInicialY = event.clientY;
+        }
+        function finalArrastrar(event){
+            let distanciaX = event.clientX - posicionInicialX;
+            let distanciaY = event.clientY - posicionInicialY;
+            let izquierda = document.getElementById("element").offsetLeft;
+            let arriba = document.getElementById("element").offsetTop;
+
+            let movimientoX = izquierda+distanciaX>0?izquierda+distanciaX: 0;
+            let movimientoY = arriba+distanciaY>0?arriba+distanciaY:0;
+
+           document.getElementById("element").style.left = movimientoX+"px";
+           document.getElementById("element").style.top=movimientoY+"px";
+            
+        }
+
+    </script>
+</head>
+<body>
+    <div id="element" draggable="true" ondragstart="arrastrar(event)" ondragend="finalArrastrar(event)">
+        <div id="titleChat">Chat</div>
+        <div id="contenidoChat">Chat Bidafarma</div>
+    
+    </div>
+    
+</body>
+</html>
