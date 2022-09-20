@@ -39,7 +39,11 @@
         <h3>Atributo action:</h3>
             <p>Este atributo nos dice hacia dónde se dirigen los datos, por regla general es a un endpoint que se encuentra detras del servidor, sino se 
                 nada, se supone que se envía a la misma página.</p>
-            <p></p>
+            <p>Un clásico es mandar un formulario de búsqueda a google:</p>
+            <div class="codigo"> &lt;form action="http:www.google.es/search?" &gt;</div>
+            <p>Sería interesante visitar <a href="https://moz.com/blog/the-ultimate-guide-to-the-google-search-parameters">
+                esta página
+            </a></p>
         <h3>Atributo target:</h3>
                 <p>Este atributo nos dice dónde se cargara la respuesta, los diferentes valores por los que se puede optar son:</p>
                 <ul>
@@ -219,9 +223,61 @@
                 <input type="submit" value="  Enviar datos  ">
               </form>
             </div>
-        <li>button</li>
-        <li>date</li>
-        <li>color</li>
+        <li>button: Define un boton, el cual se puede hacer click sin ningún comportamiento predeterminado como puede
+            serlo el de tipo reset o submit, es un tipo que se encuentra en desuso y se prefiere el uso del elemento &lt;button&gt;</button>
+        </li>
+        <div>
+            Los atributos que se le pueden asignar son muy variados:
+        </div>
+        <ul>
+            <li>disabled</li>
+            <li>autofocus</li>
+            <li>autocomplete</li>
+            <li>form</li>
+            <li>formenctype</li>
+            <li>formaction</li>
+            <li>formmethod</li>
+            <li>formnovalidate</li>
+            <li>formtarget</li>
+            <li>value</li>
+            <li>name</li>
+        </ul>
+        <li>date:  crean un campo de entrada que le permite al usuario introducir una fecha, que puede ser tanto como una caja de texto 
+            para validar el campo como una interfaz especial que le permite escoger una fecha.</li>
+            <p>El valor resultante incluye el año, el mes y el día, pero no el tiempo.</p>
+
+        <li>color: Proporciona a los usuarios un método para especificar un color, bien mediante una interfaz visual de selección o bien a través de un cuadro de texto
+            para ingresar un valor hexadecimal con formato #RRGGBB, sólo se permiten colores simples sin canal alfa.
+        </li>
+        <p>La presentación del elemento puede variar considerablemente entre navegadores y plataformas:
+             podría ser un campo de entrada sencillo que valida automáticamente que la entrada esté en el formato adecuado, o podría lanzar un selector de colores estándar de la plataforma,
+              o incluso podría abrir una ventana de colores personalizada</p>
+        <p>Existe otros atributos que pueden acompañar  a este tipo de elemento como:</p>
+            <ul>
+                <li>min</li>
+                <li>max</li>
+                <li>step</li>
+            </ul>
+            <p>Por ejemplo:</p>
+            <div class="codigo">
+                <form action="http://www.google.es/search?">
+                    <label>
+                     Fecha de nacimiento:
+                    </label>
+                    <input type="date" name="q" />
+                  
+                    <p><button>Enviar</button></p>
+                  </form>
+            </div>
+            <pre class="codigo">
+                &lt;form action="www.google.es/search?"&gt;
+                    &lt;label&gt;
+                     Fecha de nacimiento:
+                    &lt;/label&gt;
+                    &lt;input type="date" name="q" /&gt;
+                  
+                    &lt;p&gt;&lt;button&gt;Enviar&lt;/button&gt;&lt;/p&gt;
+                  &lt;/form&gt;</pre>
         <li>datetime-local</li>
         <li>email</li>
         <li>file</li>
