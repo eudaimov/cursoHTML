@@ -17,30 +17,51 @@
     <p>Las páginas web suelen contener elementos multimedia de diferentes tipos y formatos.</p>
     <h2>Compatibilidad con los navegadores</h2>
     <p>Los primeros navegadores web tenían soporte solo para texto, limitado a una sola fuente en un solo color.</p>
-    <p>  Más tarde llegaron los navegadores con soporte para colores, fuentes, imágenes y multimedia</p>
-    <p>No todos los formatos son compatibles con las páginas web conviene ver los más comunes, con el avance de la tecnología van surgiendo nuevos 
+    <p> Más tarde llegaron los navegadores con soporte para colores, fuentes, imágenes y multimedia</p>
+    <p>No todos los formatos son compatibles con las páginas web conviene ver los más comunes, con el avance de la
+        tecnología van surgiendo nuevos
         formatos compatibles.
     </p>
     <h2>Los formatos de video compatibles</h2>
     <p>Los formatos MP4, WebM y Ogg son compatibles con HTML. YouTube recomienda el formato MP4.
-        </p>
+    </p>
     <h2>Los formatos de audio compatible</h2>
-    <p>MP3 es el mejor formato para música grabada comprimida. El término MP3 se ha convertido en sinónimo de música digital.
+    <p>MP3 es el mejor formato para música grabada comprimida. El término MP3 se ha convertido en sinónimo de música
+        digital.
         Si su sitio web es sobre música grabada, MP3 es la opción. Otra opcion muy buena y libre de derechos es Ogg</p>
     <h2>Insertar video</h2>
     <pre class="codigo">
-        <video width="320" height="240" controls>
-            <source src="movie.mp4" type="video/mp4">
-            <source src="movie.ogg" type="video/ogg">
+        &lt;video width="320" height="240" controls&gt;
+            &lt;source src="movie.mp4" type="video/mp4"&gt;
+            &lt;source src="movie.ogg" type="video/ogg"&gt;
           Your browser does not support the video tag.
-          </video>
-    </pre>
-    <p>Sirve para especificar alternativas.</p>
+          &lt;/video&gt;</pre>
+    <video width="320" height="240" controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Tu navegador no soporta la reproducción de estos videos.
+    </video>
+    <p>Los elementos &lt;source&gt; Sirve para especificar alternativas. Se visualiza el primer elemento compatible</p>
     <p>El atributo controls Añade controles sobre el video play, pause, volumen</p>
     <p>El atributo autoplay comienza a ver el video según se carga </p>
     <p>Los atributos width y height especifican el ancho y el alto del video</p>
     <p>El elemento track añade subtítulos</p>
     <h2>Insertar audio</h2>
+    <pre class="codigo">
+        &lt;audio controls&gt;
+            &lt;source src="horse.ogg" type="audio/ogg"&gt;
+            &lt;source src="horse.mp3" type="audio/mpeg"&gt;
+          Your browser does not support the audio element.
+          &lt;/audio&gt;</pre>
+    <p>Al igual que en el elemento video:</p>
+    <p>Los elementos &lt;source&gt; Sirve para especificar alternativas. Se oye el primer elemento compatible</p>
+    <p>El atributo controls Añade controles sobre el video play, pause, volumen</p>
+    <p>El atributo autoplay comienza a ver el video según se carga </p>
+    <p>El atributo muted permite reproducir pero sin volumen a veces se utiliza junto con autoplay en navegadores Chromium.</p>
+    <p>Los formatos soportados son MP3, Ogg y WAV</p>
+    <h2>Insertar otro tipo plugins</h2>
+        <p>Se puede utilizar dos tipos de elementos &lt;object&gt; y &lt;embed&gt;</p>   
+        <p></p>
 </body>
 
 </html>
